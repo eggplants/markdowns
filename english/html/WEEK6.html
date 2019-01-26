@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEEK6</title>
+    <style>.emoji {
+  max-width: 1em !important;
+}
+del {
+  text-decoration: none;
+  position: relative;
+}
+del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 26px;
+}
+span.critic.comment {
+  position: relative;
+}
+span.critic.comment::before {
+  content: '\1f4ac';
+  position: initial;
+}
+span.critic.comment > span {
+  display: none;
+}
+span.critic.comment:hover > span {
+  display: initial;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  max-height: 4em;
+  overflow: auto;
+}
+span.critic.comment:focus > span {
+  display: initial;
+  text-decoration: underline;
+  position: initial;
+  top: auto;
+  left: auto;
+  border: initial;
+  border-radius: initial;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #383a42;
+  background-color: #fafafa;
+  overflow: auto;
+}
+body > :first-child,
+body > div.update-preview > :first-child {
+  margin-top: 0;
+}
+body > p,
+body > div.update-preview > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+body > ul,
+body > div.update-preview > ul,
+body > ol,
+body > div.update-preview > ol {
+  margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+strong {
+  color: #000000;
+}
+del {
+  color: #5e616e;
+}
+a,
+a code {
+  color: #526fff;
+}
+img {
+  max-width: 100%;
+}
+blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #5e616e;
+  border-color: #d1d1d2;
+  border-width: 4px;
+}
+hr {
+  margin: 3em 0;
+  border-top: 2px dashed #d1d1d2;
+  background: none;
+}
+table {
+  margin: 1.5em 0;
+}
+th {
+  color: #000000;
+}
+th,
+td {
+  padding: 0.66em 1em;
+  border: 1px solid #d1d1d2;
+}
+code {
+  color: #000000;
+  background-color: #eaeaeb;
+}
+pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+kbd {
+  color: #000000;
+  border: 1px solid #d1d1d2;
+  border-bottom: 2px solid #c1c1c2;
+  background-color: #eaeaeb;
+}
+
+pre.editor-colors {
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+pre.editor-colors .gutter {
+  color: #657b83;
+  background-color: #eee8d5;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #dfd4b1;
+}
+pre.editor-colors .invisible-character {
+  color: #dcd0a9;
+}
+pre.editor-colors .indent-guide {
+  color: #dcd0a9;
+}
+pre.editor-colors .cursor {
+  border-color: #002b36;
+}
+pre.editor-colors .cursor-line {
+  background-color: rgba(243, 200, 84, 0.15);
+}
+pre.editor-colors .selection .region {
+  background-color: #eee8d5;
+}
+pre.editor-colors .fold-marker:after,
+pre.editor-colors .gutter .line-number.folded {
+  color: #d33682;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-color: #d33682;
+}
+.syntax--comment {
+  color: #93a1a1;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #93a1a1;
+}
+.syntax--string {
+  color: #2aa198;
+}
+.syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--constant.syntax--language {
+  color: #b58900;
+}
+.syntax--constant.syntax--character,
+.syntax--constant.syntax--other,
+.syntax--constant.syntax--support {
+  color: #cb4b16;
+}
+.syntax--variable {
+  color: #268bd2;
+}
+.syntax--keyword {
+  color: #859900;
+}
+.syntax--storage {
+  color: #859900;
+}
+.syntax--meta.syntax--class {
+  color: #268bd2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--function,
+.syntax--entity.syntax--name.syntax--section,
+.syntax--entity.syntax--name.syntax--type {
+  color: #268bd2;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #657b83;
+}
+.syntax--support.syntax--function {
+  color: #268bd2;
+}
+.syntax--support.syntax--function.syntax--builtin {
+  color: #859900;
+}
+.syntax--support.syntax--type,
+.syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--tag.syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--html,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--end {
+  color: #93a1a1;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #b58900;
+  text-decoration: underline;
+}
+.syntax--invalid.syntax--illegal {
+  color: #dc322f;
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--meta.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--meta.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--control.syntax--directive,
+.syntax--source.syntax--cpp .syntax--keyword.syntax--control.syntax--directive {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--punctuation.syntax--string,
+.syntax--source.syntax--cpp .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--constant,
+.syntax--source.syntax--cpp .syntax--constant {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--constant.syntax--numeric,
+.syntax--source.syntax--cpp .syntax--constant.syntax--numeric,
+.syntax--source.syntax--c .syntax--constant.syntax--language.syntax--c,
+.syntax--source.syntax--cpp .syntax--constant.syntax--language.syntax--c {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--storage,
+.syntax--source.syntax--cpp .syntax--storage {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--entity,
+.syntax--source.syntax--cpp .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--entity.syntax--name.syntax--function.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type,
+.syntax--source.syntax--cpp .syntax--support.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type.syntax--posix-reserved,
+.syntax--source.syntax--cpp .syntax--support.syntax--type.syntax--posix-reserved {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--other.syntax--dot-access,
+.syntax--source.syntax--cpp .syntax--variable.syntax--other.syntax--dot-access {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--parameter.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--variable.syntax--parameter.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--variable,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--function,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--parameter.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--other.syntax--readwrite {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--round,
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--square {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--delimiter {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--language.syntax--boolean {
+  color: #b58900;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--separator,
+.syntax--source.syntax--css .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--begin,
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--end {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--section.syntax--function {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--name {
+  color: #859900;
+}
+.syntax--source.syntax--css .syntax--attribute-name.syntax--class,
+.syntax--source.syntax--css .syntax--id {
+  color: #268bd2;
+}
+.syntax--source.syntax--css .syntax--pseudo-element,
+.syntax--source.syntax--css .syntax--pseudo-class {
+  color: #cb4b16;
+}
+.syntax--source.syntax--css .syntax--property-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric .syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--rgb-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant.syntax--media {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--keyword.syntax--important {
+  color: #dc322f;
+}
+.syntax--source.syntax--less .syntax--keyword.syntax--unit,
+.syntax--source.syntax--scss .syntax--keyword.syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--go .syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--go .syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #93a1a1;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--meta.syntax--class.syntax--identifier .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type.syntax--primitive.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--other {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call {
+  color: #dc322f;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--meta.syntax--method {
+  color: #6c71c4;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--punctuation.syntax--definition.syntax--method-parameters {
+  color: #586e75;
+}
+.syntax--source.syntax--js .syntax--comma {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control.syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--dom {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--delimiter + .syntax--dom {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--constant {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--square {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--curly {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source > .syntax--embedded.syntax--punctuation {
+  color: #dc322f;
+}
+.syntax--source.syntax--js.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--instance {
+  color: #268bd2;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--class {
+  color: #b58900;
+}
+.syntax--md .syntax--link .syntax--entity,
+.syntax--gfm .syntax--link .syntax--entity {
+  color: #6c71c4;
+}
+.syntax--md .syntax--list.syntax--ordered,
+.syntax--gfm .syntax--list.syntax--ordered {
+  color: #859900;
+}
+.syntax--md .syntax--list.syntax--unordered,
+.syntax--gfm .syntax--list.syntax--unordered {
+  color: #b58900;
+}
+.syntax--md .syntax--raw,
+.syntax--gfm .syntax--raw {
+  font-style: italic;
+}
+.syntax--md.syntax--support,
+.syntax--gfm.syntax--support {
+  color: #93a1a1;
+}
+.syntax--md.syntax--support.syntax--quote,
+.syntax--gfm.syntax--support.syntax--quote {
+  color: #6c71c4;
+}
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+}
+.syntax--markup.syntax--italic {
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #268bd2;
+}
+.syntax--markup.syntax--link {
+  color: #2aa198;
+}
+.syntax--markup.syntax--deleted {
+  color: #dc322f;
+}
+.syntax--markup.syntax--changed {
+  color: #b58900;
+}
+.syntax--markup.syntax--inserted {
+  color: #2aa198;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--function {
+  color: #cb4b16;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--other {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--variable {
+  color: #268bd2;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--array {
+  color: #dc322f;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--string {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--variable {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--construct {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--other {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function.syntax--magic {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--quantifier {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--control.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--character {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--support.syntax--function.syntax--builtin {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--exception.syntax--python {
+  color: #b58900;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--python {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class.syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--definition.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--separator.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--meta.syntax--embedded .syntax--punctuation.syntax--section {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--string {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--ruby .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--constant {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--boolean {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--instance .syntax--punctuation.syntax--definition {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--class.syntax--control {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--module {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--require .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--control {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--special-method {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--symbol {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--symbol .syntax--punctuation.syntax--definition {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--hashkey {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--hashkey .syntax--punctuation.syntax--definition {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global .syntax--punctuation {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--block {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--self {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--separator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--section.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--punctuation .syntax--source.syntax--ruby {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--array,
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function.syntax--kernel {
+  color: #859900;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--declaration {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--comparison {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--class,
+.syntax--source.syntax--scala .syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--scala .syntax--val {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--parameter {
+  color: #6c71c4;
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--control.syntax--flow {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--constant.syntax--language {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--function.syntax--declaration {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--modifier.syntax--other {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--package {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--import {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--type .syntax--bounds,
+.syntax--source.syntax--scala .syntax--type .syntax--class {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded).syntax--link.syntax--entity {
+  color: #268bd2;
+  text-decoration: underline;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--class,
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--parameter {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--description {
+  color: #93a1a1;
+}
+.syntax--source.syntax--scala .syntax--embedded {
+  color: #374549;
+  font-style: italic;
+}
+.syntax--source.syntax--scala .syntax--embedded .syntax--margin,
+.syntax--source.syntax--scala .syntax--embedded .syntax--delimiters {
+  font-style: normal;
+}
+.syntax--source.syntax--ts .syntax--import .syntax--control,
+.syntax--source.syntax--tsx .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--name.syntax--type,
+.syntax--source.syntax--tsx .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--inherited-class,
+.syntax--source.syntax--tsx .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--support.syntax--type,
+.syntax--source.syntax--tsx .syntax--support.syntax--type {
+  color: #b58900;
+}
+
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+</style>
+
+  </head>
+  <body>
+    <h1>WEEK 6</h1>
+<details><summary>【DAY 1 - THE NEWS PAPER UMBRELLA】</summary>
+<h3>DAY1 - THE NEWS PAPER UMBRELLA</h3>
+<h4></h4>
+<p>■我々の隣人は裕福な発明家であり、その最新の突然の<u><strong>賢い</strong></u>考えは、傘の代替品と<u><strong>なりうる</strong></u>もので、多くの雑誌で特集された。<br>
+Our neighbor is an<br>
+inventor whose latest brainstorm, a <u><strong>feasible</strong></u> umbrella substitute, has been featured in many magazines.</p>
+<p>■傍目には単純に<u><strong>見え</strong></u>るそれは、固いプラスティック片で、概ね物差し大であり、女性のハンドバッグや男性の背広のポケットに快適に収まる。<br>
+As simply as the eye can <u><strong>discern</strong></u>, it is a hard plastic strip, about the size of a ruler, which fits comfortably into a woman’s handbag or a man’s suit jacket.</p>
+<p>■もし突然の風雨に遭ったなら、プラスティックを十字型に広げる。<br>
+If a person is caught in a sudden rainstorm, he swings the plastic open in the shape of a cross.</p>
+<p>■その四方にはクリップ状の仕掛けがついている。<br>
+Attached to each arm is a clip-like device.</p>
+<p>■次に、手持ちの新聞を取り出し、それを4つのクリップに差し込む。<br>
+Next, he takes the newspaper he is carrying and slides it under each of the four clips.</p>
+<p>■すると、しっかりと頭上を覆われて、天気に<u><strong>立ち向かう</strong></u>ことができる。<br>
+Now, equipped with a rigid head covering he can <u><strong>sally</strong></u> forth to face the elements.</p>
+<p>■傘製造者にとっては<u><strong>おどろくこと</strong></u>に、この道具は勢いよく、取り分け通勤者に売れている。<br>
+To the <u><strong>consternation</strong></u> of the umbrella manufacturers, it has been enjoying a brisk sale, especially among commuters.</p>
+<p>■もしこの道具が上手く売れ続けるなら、傘業界に悪影響を与え得る。<br>
+If it continues to do well, it could have a pernicious effect upon the umbrella industry.</p>
+<h4></h4>
+<hr>
+<h4>|affluent - 豊富な, 富んだ (rich)</h4>
+<p>Under duress from the tax officer, the beggar admitted that he was truly <u><strong>affluent</strong></u>.</p>
+<h4>|feasible - 実現可能な, ありそうな (possible)</h4>
+<p>It’s <u><strong>feasible</strong></u> to build an electric auto, but wouldn’t you need a terribly long extension cord?</p>
+<h4>|discern - 見通す, 知覚する (perceive)</h4>
+<p>When we could <u><strong>discern</strong></u> the city lights, we knew we were safe at last.</p>
+<h4>|sally - 打って出る, (逆襲に)出撃する (suddenly rush forth)</h4>
+<p>Some prisoners planned a disturbance while others would <u><strong>sally</strong></u> toward the game.</p>
+<h4>|consternation - ひどい驚き, 仰天 (dismay)</h4>
+<p>To the <u><strong>consternation</strong></u> of the sergeant, there was a paucity of volunteers for the dangerous mission.</p>
+</details>
+<details><summary>【DAY 2 - PATENT PENDING】</summary>
+<hr>
+<h3>DAY2 - PATENT PENDING</h3>
+<h4></h4>
+<p>■我が相棒ヴェーネ（<u><strong>早熟な</strong></u>車両関係の魔法使い）と私は独自の発明をすることを思いついた。<br>
+My buddy Verne, a <u><strong>precocious</strong></u> automotive wizard, and I were inspired to do some inventing on our own.</p>
+<p>■我々は、道路の隙間に並行に駐車することが可能なのではないかと考えた。<br>
+We thought it might be feasible to park a car parallel to a space on the street.</p>
+<p>■そこで、ボタンを押下することにより、4輪のタイヤを接地面からわずかに上昇させ、その間に2つの特別な車輪を道に垂直に下ろす。<br>
+Then, by pressing a button, we could raise the four tires off the ground slightly, while dropping two special wheels perpendicular to the curb.</p>
+<p>■そうすれば狭い駐車スペースにねじ込むのは子供にでもできるだろう。<br>
+It would then be child’s play to roll into the narrowest of parking spaces.</p>
+<p>■我々はこのアイデアをフォードの代理店を経営するエド・グリーンに持ち込んだ。目的は彼の反応を引き出すためだ。<br>
+We took the idea to Ed Greene who runs the Ford agency in order to elicit his reaction.</p>
+<p>■我々の企画におざなりな一瞥をくれた後、<u><strong>残念なこと</strong></u>に、エドは我々のアイデアは馬鹿げていると鼻で笑った。<br>
+After a <u><strong>perfunctory</strong></u> glance at our plans, to our <u><strong>chagrin</strong></u> Ed snorted that our idea was inane,</p>
+<p>■だが、我々は彼がただ我々のすばらしさに嫉妬しているだけだと決め込んだ。<br>
+but we decided that he was just jealous of our brilliance.</p>
+<p>■明日、我々は、若き天才たちの努力を<u><strong>馬鹿にする</strong></u>ような<u><strong>愚かな</strong></u>車屋の知性を計ることが可能となるコンピューターに着手することにしている。<br>
+Tomorrow we are going to start on a computer that will enable us to measure the intelligence of <u><strong>perverse</strong></u> automobile dealers who like to <u><strong>deride</strong></u> the efforts of junior geniuses.</p>
+<h4></h4>
+<hr>
+<h4>|precocious - 早熟な, 発達の早い, 早咲きの (reaching maturity early)</h4>
+<p>The children in Shakespeare’s plays are so <u><strong>precocious</strong></u> that they all sound like grandparents.</p>
+<h4>|perfunctory - おざなりの, いいかげんな (done without care, superficial)</h4>
+<p>Edith gave only <u><strong>perfunctory</strong></u> attention to the new millennium, skipping our New Year’s Eve party.</p>
+<h4>|chagrin - 無念, 悔しさ (feeling of disappointment, humiliation)</h4>
+<p>To the <u><strong>chagrin</strong></u> of many taxpayers, some citizens seem to cheat the government with impunity.</p>
+<h4>|perverse - 非を認めない, あまのじゃくな, ひねくれた (contrary, persisting in error)</h4>
+<p>When I correct my kid brother’s math errors, he is <u><strong>perverse</strong></u> enough to insist that he is right.</p>
+<h4>|deride - バカにする, 嘲笑する (to ridicule, scoff)</h4>
+<p>The Wright brothers didn’t become distraught when a skeptic would <u><strong>deride</strong></u> their work.</p>
+</details>
+<details><summary>【DAY 3 - HOLD THAT NOBEL PRIZE!】</summary>
+<hr>
+<h3>DAY3 - HOLD THAT NOBEL PRIZE!</h3>
+<h4></h4>
+<p>■発明と発見といえば、丁度、オハイオの立派な科学者が、三度の食事のすべての栄養価を持つ錠剤を作り出したと聞いたところだ。<br>
+Speaking of inventions and discoveries, I just learned that an eminent scientist in Ohio has developed a pill that contains all the nutritive value of three complete meals.</p>
+<p>■我々が毎日必要なビタミンやミネラルをもたらすだけでなく、この錠剤は満腹感までもたらしてくれる。<br>
+In addition to providing us with the vitamins and minerals we need daily, this pill also gives a feeling of fullness.</p>
+<p>■出資者によると、錠剤は栄養を与え、満足させてくれるという。<br>
+According to its sponsors, the pill will nourish and satisfy.</p>
+<p>■そんな<u><strong>立派な</strong></u>成果を<u><strong>過小評価する</strong></u> のは心苦しいのだが、私には、最も忌むべき発見のように思われる。<br>
+I hate to <u><strong>disparage</strong></u> such a <u><strong>laudable</strong></u> achievement, but to me it seems like a most objectionable discovery.</p>
+<p>■科学的な栄光というより、私は大いなるへま、科学的大惨事、研究室的<u><strong>大失敗</strong></u>と呼びたい。<br>
+Rather than a scientific triumph, I’d be inclined to label it as an egregious blunder, a scientific disaster, a laboratory <u><strong>fiasco</strong></u>.</p>
+<p>■一粒の錠剤が、熱々のとうもろこしパンをむさぼる喜び、厚いステーキを<u><strong>噛みしめる</strong></u>喜び、カリカリしたフレンチフライを噛みしめる喜び、チョコレートサンデーをむさぼる喜びに置き換わりうるなどと正気で考える人がいるだろうか？<br>
+Is there anyone in his right mind who thinks that a pill can replace the pleasures of devouring hot corn bread, <u><strong>masticating</strong></u> on a thick steak, biting into crisp french fries, or attacking a chocolate sundae?</p>
+<p>■残念だが、私はこの錠剤だけは噛ま<u><strong>ないようにする</strong></u>。<br>
+I’m afraid that this is one pill I’ll have to <u><strong>eschew</strong></u> from chewing.</p>
+<h4></h4>
+<hr>
+<h4>|disparage - 軽蔑する, そしる (to discredit, belittle)</h4>
+<p>The affluent store-owner <u><strong>disparages</strong></u> the efforts of his small competitor, saying that he could always tolerate that kind of rivalry.</p>
+<h4>|laudable - 見上げた, 賞賛に値する (praiseworthy)</h4>
+<p>The paradox is that Javert’s inexorable pursuits of Jean Valjean was both <u><strong>laudable</strong></u> and despicable.</p>
+<h4>|fiasco - (野心的な企ての滑稽な)大失敗 (complete failure)</h4>
+<p>In an acrimonious letter, her father described the project as a complete <u><strong>fiasco</strong></u>.</p>
+<h4>|masticate - 噛む (to chew up)</h4>
+<p>To aid in digestion, you must <u><strong>masticate</strong></u> each piece of meat one dozen times.</p>
+<h4>|eschew - (意図的に)避ける, 慎む (avoid)</h4>
+<p>Once he sought the limelight, but now he <u><strong>eschew</strong></u> all interviews.</p>
+</details>
+<details><summary>【DAY 4 - PERFECT PRODUCTS】</summary>
+<hr>
+<h3>DAY4 - PERFECT PRODUCTS</h3>
+<h4></h4>
+<p>■タレないタイヤ、破れないストッキング、そして書き続けられるペンといった発明についての根強い噂を<u><strong>鎮める</strong></u>のは決してできまいと考える。<br>
+I guess we’ll never be able to <u><strong>quell</strong></u> those persistent rumors about the invention of auto tires that will never wear out, stockings that cannot tear, and pens that won’t run dry.</p>
+<p>■<u><strong>話し好きな</strong></u>経済学者が、そんな製品は決して市場に出されないと教えてくれた。<br>
+A <u><strong>voluble</strong></u> economist informed me that such products will never be marketed.</p>
+<p>■「想像できるかね」彼は聞いた。「製造業者が自分の首を絞めるようなことをするものだろうか？一体、購入者が二度と買い換えなくていい商品なんか売るものかね？売らないよ」<br>
+“Can you imagine,” he asked, “a manufacturer cutting his own throat? Why would he sell you an item that you will never have to replace? No,”</p>
+<p>■私の<u><strong>腹心</strong></u>は囁いた。「計算された<u><strong>経年劣化</strong></u>によって製品に寿命を持たせる、目的はまた買い直させるため。」<br>
+my <u><strong>confidant</strong></u> whispered, “it’s part of their scheme of planned <u><strong>obsolescence</strong></u> to sell you merchandise with a limited life span in order to keep you coming back for more.”</p>
+<p>■私はかような完璧な製品の存在については<u><strong>疑う</strong></u>が、しかし、それ自体も疑ってしまう。<br>
+I am <u><strong>dubious</strong></u> about the existence of those perfect products, but then I’m from Missouri.</p>
+<h4></h4>
+<hr>
+<h4>|quell - 鎮める, 鎮圧する (put an end to)</h4>
+<p>In order to <u><strong>quell</strong></u> the riot, the police sallied forth with tear gas.</p>
+<h4>|voluble - 口達者な, おしゃべりな, 流暢な (talkative)</h4>
+<p>I could not doze in the chair because of the <u><strong>voluble</strong></u> barbar.</p>
+<h4>|confidant(e) - 腹心の友,親友(-eは女性) (one to whom you confide your secrets)</h4>
+<p>A teenage boy’s father should be his true <u><strong>confidant</strong></u>.</p>
+<h4>|obsolescence - 廃れたもの, 旧来のもの (process of wearing out)</h4>
+<p>The <u><strong>obsolescence</strong></u> built into many products could be regarded as a flagrant insult toward the duped consumer.</p>
+<h4>|dubious - 疑っている, いかがわしい (doubtful)</h4>
+<p>When the duplicity was revealed, the jury became <u><strong>dubious</strong></u> about Ed’s innocence.</p>
+</details>
+<details><summary>【WEEK 6 まとめ】</summary>
+<hr>
+<h3>WEEK 6 まとめ</h3>
+<table>
+<thead>
+<tr>
+<th>単語</th>
+<th>意味</th>
+<th>英語での説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>affluent</td>
+<td>豊富な, 富んだ</td>
+<td>rich</td>
+</tr>
+<tr>
+<td>feasible</td>
+<td>実現可能な, ありそうな</td>
+<td>possible</td>
+</tr>
+<tr>
+<td>discern</td>
+<td>見通す, 知覚する</td>
+<td>perceive</td>
+</tr>
+<tr>
+<td>sally</td>
+<td>打って出る, 出撃する</td>
+<td>suddenly rush forth</td>
+</tr>
+<tr>
+<td>consternation</td>
+<td>ひどい驚き, 仰天</td>
+<td>dismay</td>
+</tr>
+<tr>
+<td>precocious</td>
+<td>早熟な, 発達の早い</td>
+<td>reaching maturity early</td>
+</tr>
+<tr>
+<td>perfunctory</td>
+<td>おざなりの, いい加減な</td>
+<td>done without care, superficial</td>
+</tr>
+<tr>
+<td>chagrin</td>
+<td>無念, 悔しさ</td>
+<td>feeling of disappointment, humiliation</td>
+</tr>
+<tr>
+<td>perverse</td>
+<td>非を認めない, ひねくれた</td>
+<td>contrary, persisting in error</td>
+</tr>
+<tr>
+<td>deride</td>
+<td>バカにする, 嘲笑する</td>
+<td>to ridicule, scoff</td>
+</tr>
+<tr>
+<td>disparage</td>
+<td>軽蔑する, そしる</td>
+<td>to discredit, belittle</td>
+</tr>
+<tr>
+<td>laudable</td>
+<td>見上げた, 賞賛に値する</td>
+<td>praiseworthy</td>
+</tr>
+<tr>
+<td>fiasco</td>
+<td>(滑稽な)大失敗</td>
+<td>complete failure</td>
+</tr>
+<tr>
+<td>masticate</td>
+<td>噛む</td>
+<td>to chew up</td>
+</tr>
+<tr>
+<td>eschew</td>
+<td>(意図的に)避ける, 慎む</td>
+<td>avoid</td>
+</tr>
+<tr>
+<td>quell</td>
+<td>鎮める, 鎮圧する</td>
+<td>put an end to</td>
+</tr>
+<tr>
+<td>voluble</td>
+<td>口達者な, おしゃべりな</td>
+<td>talkative</td>
+</tr>
+<tr>
+<td>confidant(e)</td>
+<td>腹心の友, 親友</td>
+<td>one to whom you confide your secrets</td>
+</tr>
+<tr>
+<td>obsolescence</td>
+<td>廃れたもの, 旧来のもの</td>
+<td>process of wearing out</td>
+</tr>
+<tr>
+<td>dubious</td>
+<td>疑っている, いかがわしい</td>
+<td>doubtful</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><a href="./index.html">戻る</a></p>
+
+  </body>
+</html>

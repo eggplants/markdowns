@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEEK9</title>
+    <style>.emoji {
+  max-width: 1em !important;
+}
+del {
+  text-decoration: none;
+  position: relative;
+}
+del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 26px;
+}
+span.critic.comment {
+  position: relative;
+}
+span.critic.comment::before {
+  content: '\1f4ac';
+  position: initial;
+}
+span.critic.comment > span {
+  display: none;
+}
+span.critic.comment:hover > span {
+  display: initial;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  max-height: 4em;
+  overflow: auto;
+}
+span.critic.comment:focus > span {
+  display: initial;
+  text-decoration: underline;
+  position: initial;
+  top: auto;
+  left: auto;
+  border: initial;
+  border-radius: initial;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #383a42;
+  background-color: #fafafa;
+  overflow: auto;
+}
+body > :first-child,
+body > div.update-preview > :first-child {
+  margin-top: 0;
+}
+body > p,
+body > div.update-preview > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+body > ul,
+body > div.update-preview > ul,
+body > ol,
+body > div.update-preview > ol {
+  margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+strong {
+  color: #000000;
+}
+del {
+  color: #5e616e;
+}
+a,
+a code {
+  color: #526fff;
+}
+img {
+  max-width: 100%;
+}
+blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #5e616e;
+  border-color: #d1d1d2;
+  border-width: 4px;
+}
+hr {
+  margin: 3em 0;
+  border-top: 2px dashed #d1d1d2;
+  background: none;
+}
+table {
+  margin: 1.5em 0;
+}
+th {
+  color: #000000;
+}
+th,
+td {
+  padding: 0.66em 1em;
+  border: 1px solid #d1d1d2;
+}
+code {
+  color: #000000;
+  background-color: #eaeaeb;
+}
+pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+kbd {
+  color: #000000;
+  border: 1px solid #d1d1d2;
+  border-bottom: 2px solid #c1c1c2;
+  background-color: #eaeaeb;
+}
+
+pre.editor-colors {
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+pre.editor-colors .gutter {
+  color: #657b83;
+  background-color: #eee8d5;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #dfd4b1;
+}
+pre.editor-colors .invisible-character {
+  color: #dcd0a9;
+}
+pre.editor-colors .indent-guide {
+  color: #dcd0a9;
+}
+pre.editor-colors .cursor {
+  border-color: #002b36;
+}
+pre.editor-colors .cursor-line {
+  background-color: rgba(243, 200, 84, 0.15);
+}
+pre.editor-colors .selection .region {
+  background-color: #eee8d5;
+}
+pre.editor-colors .fold-marker:after,
+pre.editor-colors .gutter .line-number.folded {
+  color: #d33682;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-color: #d33682;
+}
+.syntax--comment {
+  color: #93a1a1;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #93a1a1;
+}
+.syntax--string {
+  color: #2aa198;
+}
+.syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--constant.syntax--language {
+  color: #b58900;
+}
+.syntax--constant.syntax--character,
+.syntax--constant.syntax--other,
+.syntax--constant.syntax--support {
+  color: #cb4b16;
+}
+.syntax--variable {
+  color: #268bd2;
+}
+.syntax--keyword {
+  color: #859900;
+}
+.syntax--storage {
+  color: #859900;
+}
+.syntax--meta.syntax--class {
+  color: #268bd2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--function,
+.syntax--entity.syntax--name.syntax--section,
+.syntax--entity.syntax--name.syntax--type {
+  color: #268bd2;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #657b83;
+}
+.syntax--support.syntax--function {
+  color: #268bd2;
+}
+.syntax--support.syntax--function.syntax--builtin {
+  color: #859900;
+}
+.syntax--support.syntax--type,
+.syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--tag.syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--html,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--end {
+  color: #93a1a1;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #b58900;
+  text-decoration: underline;
+}
+.syntax--invalid.syntax--illegal {
+  color: #dc322f;
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--meta.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--meta.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--control.syntax--directive,
+.syntax--source.syntax--cpp .syntax--keyword.syntax--control.syntax--directive {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--punctuation.syntax--string,
+.syntax--source.syntax--cpp .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--constant,
+.syntax--source.syntax--cpp .syntax--constant {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--constant.syntax--numeric,
+.syntax--source.syntax--cpp .syntax--constant.syntax--numeric,
+.syntax--source.syntax--c .syntax--constant.syntax--language.syntax--c,
+.syntax--source.syntax--cpp .syntax--constant.syntax--language.syntax--c {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--storage,
+.syntax--source.syntax--cpp .syntax--storage {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--entity,
+.syntax--source.syntax--cpp .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--entity.syntax--name.syntax--function.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type,
+.syntax--source.syntax--cpp .syntax--support.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type.syntax--posix-reserved,
+.syntax--source.syntax--cpp .syntax--support.syntax--type.syntax--posix-reserved {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--other.syntax--dot-access,
+.syntax--source.syntax--cpp .syntax--variable.syntax--other.syntax--dot-access {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--parameter.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--variable.syntax--parameter.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--variable,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--function,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--parameter.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--other.syntax--readwrite {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--round,
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--square {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--delimiter {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--language.syntax--boolean {
+  color: #b58900;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--separator,
+.syntax--source.syntax--css .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--begin,
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--end {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--section.syntax--function {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--name {
+  color: #859900;
+}
+.syntax--source.syntax--css .syntax--attribute-name.syntax--class,
+.syntax--source.syntax--css .syntax--id {
+  color: #268bd2;
+}
+.syntax--source.syntax--css .syntax--pseudo-element,
+.syntax--source.syntax--css .syntax--pseudo-class {
+  color: #cb4b16;
+}
+.syntax--source.syntax--css .syntax--property-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric .syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--rgb-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant.syntax--media {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--keyword.syntax--important {
+  color: #dc322f;
+}
+.syntax--source.syntax--less .syntax--keyword.syntax--unit,
+.syntax--source.syntax--scss .syntax--keyword.syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--go .syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--go .syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #93a1a1;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--meta.syntax--class.syntax--identifier .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type.syntax--primitive.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--other {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call {
+  color: #dc322f;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--meta.syntax--method {
+  color: #6c71c4;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--punctuation.syntax--definition.syntax--method-parameters {
+  color: #586e75;
+}
+.syntax--source.syntax--js .syntax--comma {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control.syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--dom {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--delimiter + .syntax--dom {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--constant {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--square {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--curly {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source > .syntax--embedded.syntax--punctuation {
+  color: #dc322f;
+}
+.syntax--source.syntax--js.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--instance {
+  color: #268bd2;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--class {
+  color: #b58900;
+}
+.syntax--md .syntax--link .syntax--entity,
+.syntax--gfm .syntax--link .syntax--entity {
+  color: #6c71c4;
+}
+.syntax--md .syntax--list.syntax--ordered,
+.syntax--gfm .syntax--list.syntax--ordered {
+  color: #859900;
+}
+.syntax--md .syntax--list.syntax--unordered,
+.syntax--gfm .syntax--list.syntax--unordered {
+  color: #b58900;
+}
+.syntax--md .syntax--raw,
+.syntax--gfm .syntax--raw {
+  font-style: italic;
+}
+.syntax--md.syntax--support,
+.syntax--gfm.syntax--support {
+  color: #93a1a1;
+}
+.syntax--md.syntax--support.syntax--quote,
+.syntax--gfm.syntax--support.syntax--quote {
+  color: #6c71c4;
+}
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+}
+.syntax--markup.syntax--italic {
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #268bd2;
+}
+.syntax--markup.syntax--link {
+  color: #2aa198;
+}
+.syntax--markup.syntax--deleted {
+  color: #dc322f;
+}
+.syntax--markup.syntax--changed {
+  color: #b58900;
+}
+.syntax--markup.syntax--inserted {
+  color: #2aa198;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--function {
+  color: #cb4b16;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--other {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--variable {
+  color: #268bd2;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--array {
+  color: #dc322f;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--string {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--variable {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--construct {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--other {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function.syntax--magic {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--quantifier {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--control.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--character {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--support.syntax--function.syntax--builtin {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--exception.syntax--python {
+  color: #b58900;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--python {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class.syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--definition.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--separator.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--meta.syntax--embedded .syntax--punctuation.syntax--section {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--string {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--ruby .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--constant {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--boolean {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--instance .syntax--punctuation.syntax--definition {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--class.syntax--control {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--module {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--require .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--control {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--special-method {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--symbol {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--symbol .syntax--punctuation.syntax--definition {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--hashkey {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--hashkey .syntax--punctuation.syntax--definition {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global .syntax--punctuation {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--block {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--self {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--separator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--section.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--punctuation .syntax--source.syntax--ruby {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--array,
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function.syntax--kernel {
+  color: #859900;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--declaration {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--comparison {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--class,
+.syntax--source.syntax--scala .syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--scala .syntax--val {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--parameter {
+  color: #6c71c4;
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--control.syntax--flow {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--constant.syntax--language {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--function.syntax--declaration {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--modifier.syntax--other {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--package {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--import {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--type .syntax--bounds,
+.syntax--source.syntax--scala .syntax--type .syntax--class {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded).syntax--link.syntax--entity {
+  color: #268bd2;
+  text-decoration: underline;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--class,
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--parameter {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--description {
+  color: #93a1a1;
+}
+.syntax--source.syntax--scala .syntax--embedded {
+  color: #374549;
+  font-style: italic;
+}
+.syntax--source.syntax--scala .syntax--embedded .syntax--margin,
+.syntax--source.syntax--scala .syntax--embedded .syntax--delimiters {
+  font-style: normal;
+}
+.syntax--source.syntax--ts .syntax--import .syntax--control,
+.syntax--source.syntax--tsx .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--name.syntax--type,
+.syntax--source.syntax--tsx .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--inherited-class,
+.syntax--source.syntax--tsx .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--support.syntax--type,
+.syntax--source.syntax--tsx .syntax--support.syntax--type {
+  color: #b58900;
+}
+
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+</style>
+
+  </head>
+  <body>
+    <h1>WEEK 9</h1>
+<details><summary>【DAY 1 - JUST SPELL THE NAME CORRECTLY】</summary>
+<hr>
+<h3>DAY 1 - JUST SPELL THE NAME CORRECTLY</h3>
+<h4></h4>
+<p>■P・T・バーナム（立派なサーカスの<u><strong>興行主</strong></u>）は、ある女性から話しかけられた。<br>
+P. T. Barnum, the great circus <u><strong>impresario</strong></u>, was once accosted* by a woman</p>
+<p>■彼女は彼に、彼について書いた下世話な原稿を見せ、彼が彼女に金を払わない限り、本を出版すると述べた。<br>
+who showed him a scurrilous* manuscript about himself, and said that unless he paid her, she would have the book printed.</p>
+<p>■バーナムはこの<u><strong>脅迫</strong></u>を拒絶した。<br>
+Barnum rejected the <u><strong>extortion</strong></u> attempt.</p>
+<p>■「好きなだけ書きなさい。」彼は答えた。<br>
+“Say what you please,” he replied,</p>
+<p>■「だが必ず私について何かしら触れるのだ。<br>
+“but make sure that you mention me in some way.</p>
+<p>■そして私のところへ持って来なさい。そしたら私が出版者として君の仕事ぶりを評価してあげよう。」<br>
+Then come to me and I will estimate the value of your services as a publicity agent.”</p>
+<p>■バーナムは明らかに、公的立場にある者にとって<u><strong>自分に不利な</strong></u>批評は<u><strong>財産</strong></u>だと見なしていた。<br>
+Barnum obviously felt that <u><strong>adverse</strong></u> criticism was an <u><strong>asset</strong></u> for a public figure.</p>
+<p>■スポットライトを求める者は自身について何が書かれたかを気にするべきではなく、<br>
+A man who seeks the limelight should not care what is written about him,</p>
+<p>■むしろ自身について書かれなくなったときに案じるべきだと。<br>
+but should be concerned only when they stop writing about him.</p>
+<p>■バーナムの哲学は、我々が民衆扇動家や<u><strong>偏見の持ち主</strong></u>についての大量の広告を見返すのを上手くやるように提案する。<br>
+Barnum’s philosophy suggests that we might do well to review the plethora* of publicity given to rabble-rousers and <u><strong>bigots</strong></u>.</p>
+<h4></h4>
+<hr>
+<h4>|impresario - 興行主 (one who presents cultural series, oganizer)</h4>
+<p>The eminent <u><strong>impresario</strong></u> brought many cultural spectacles to our shoes.</p>
+<h4>|extortion - 強要, 強奪 (getting money by threats)</h4>
+<p>When the business manager was accused of <u><strong>extortion</strong></u>, his colleagues sought to oust him from the firm.</p>
+<h4>|adverse - 不利な, 好ましくない (unfavorable, harmful)</h4>
+<p>It was excruciatingly painful for the actors to read the <u><strong>adverse</strong></u> reviews that their performances had received.</p>
+<h4>|asset - 資産, 財産 (a valuable thing to have)</h4>
+<p>President Obama found that texting was an <u><strong>asset</strong></u> to his communication skills.</p>
+<h4>|bigot - 強い偏見をもつ人, 偏屈者 (a narrow-minded, prejudiced person)</h4>
+<p>Attacked by the irate crowd, the <u><strong>bigot</strong></u> asked the police for sanctuary.</p>
+</details>
+<details><summary>【DAY 2 - BIGOTS GET PUBLICITY】</summary>
+<hr>
+<h3>DAY 2 - BIGOTS GET PUBLICITY</h3>
+<h4></h4>
+<p>■今日では、<u><strong>傲然とした</strong></u>偏見家、少数過激派の指導者、ヘイト屋、いずれも少数の<u><strong>取り巻き</strong></u>を連れたこれらは、世間の注目を集めるのは比較的容易だと見なしている。<br>
+Today, the <u><strong>blatant</strong></u> bigot, the leader of a lunatic fringe, and the hate-monger, each with his tiny <u><strong>entourage</strong></u>, find it relatively easy to attract publicity.</p>
+<p>■新聞はニュースにする価値があるとして、これらの扇動家による<u><strong>嫌悪に満ちた</strong></u>行為に紙面を割く。<br>
+Newspapers give space to the <u><strong>virulent</strong></u> activities of those agitators on the grounds that they are newsworthy.</p>
+<p>■テレビプロデューサーやレディオのトップは、扇情的なものを求めて、しばしばこれらの議論の余地のある人物にまで歓迎を広げる。<br>
+TV producers and radio executives, seeking for sensationalism, often extend a welcome to such controversial characters.</p>
+<p>■「そうです。」その種の番組の司会役が言った。<br>
+“Yes,” said the host of one such program,</p>
+<p>■「我々は偏見家を招待します。しかしそれは彼らの愚かな方針を公開することで彼らを馬鹿らしく見せるたいう目的のためだけです。」<br>
+“we invite bigots, but it is only for the purpose of making them look ridiculous by displaying their inane* policies to the public.”</p>
+<p>■いくつかの市民感覚ある組織は、だが、答えて、それらの司会役はこれらのゲストを常に破壊する用意をしているわけではなく、<br>
+Some civic-minded organizations have answered, however, that the hosts are not always equipped to demolish those guests,</p>
+<p>■また、もし用意しているとしても、視聴者はなお彼らの<u><strong>吐き</strong></u>散らす<u><strong>毒</strong></u>に晒されるだろうと。<br>
+and even if they were, the audience would still be exposed to the <u><strong>venom</strong></u> they <u><strong>spew</strong></u> forth.</p>
+<h4></h4>
+<hr>
+<h4>|blatant - 騒々しい, けばけばしい (disagreeably loud, very showy)</h4>
+<p>With <u><strong>blatant</strong></u> discourtesy the reporters continued to harass the bereaved family.</p>
+<h4>|entourage - 側近たち (group of attendants)</h4>
+<p>The visiting dictator’s ubiquitous <u><strong>entourage</strong></u> of bodyguards disturbed our tranquil city.</p>
+<h4>|virulent - 悪意に満ちた, 有毒の (full of hate, harmful)</h4>
+<p>Europe’s population was afflicted by a <u><strong>virulent</strong></u> plague known as the Black Death.</p>
+<h4>|venom - 毒, 悪意, 恨み (poison, spite, malice)</h4>
+<p>Clym Yeobright’s mother succumbed to the <u><strong>venom</strong></u> of a snake bite.</p>
+<h4>|spew - 吐く, ぶちまける (throw up, vomit, eject)</h4>
+<p>From each candidate’s headquarters acrimonious charges would <u><strong>spew</strong></u> forth diary.</p>
+</details>
+<details><summary>【DAY 3 - COPING WITH BIGOTS】</summary>
+<hr>
+<h3>DAY 3 - COPING WITH BIGOTS</h3>
+<h4></h4>
+<p>■偏見屋があなたのご近所で会合を開きたがったとしよう。<br>
+Suppose a bigot wished to organize a meeting in your neighborhood.</p>
+<p>■自由に喋る権利を重んじる我々は、その要望を拒絶することを<u><strong>厭う</strong></u>。彼が嫌悪について話すとしても。<br>
+Since we cherish freedom of speech, we are <u><strong>loath</strong></u> to deny the request, even if he preaches hatred.</p>
+<p>■その結果、ヘイト屋がホールを借りる機会を得、会合を企画し、有害な書き物を出版し、参画を<u><strong>懇願する</strong></u>こととなる。<br>
+As a result, hate-mongers are given the opportunity to rent halls, conduct meetings, publish abusive literature,and <u><strong>solicit</strong></u> contributions.</p>
+<p>■彼らにどう対処すべきか？ある<u><strong>聡い</strong></u>観察者、S・アンディル・ファインバーグ教授は、「隔離療法」を<u><strong>提唱する</strong></u>。<br>
+What can be done about them? One <u><strong>astute</strong></u> observer, Prof. S. And hil Fineberg, <u><strong>advocates</strong></u> the “quarantine method.”</p>
+<p>■彼のアイディアは、そういった集団に広報させず、完全に無視するというものだ。<br>
+His plan is to give such groups no publicity and to ignore them completely.</p>
+<p>■彼は、スポットライトの暖かさナシでは、偏見屋はカチンコチンに固まり、<u><strong>効果を失ってしまう</strong></u>だろうと考える。<br>
+Without the warmth of the spotlight, he feels that the bigot will freeze and become <u><strong>ineffectual</strong></u>.</p>
+<p>■そういったの歪んだ精神と論じ合う事は不可能であり、状況を悪化させるだけのことが多い。<br>
+Debating with such warped minds is not feasible* and only tends to exacerbate* the situation.</p>
+<h4></h4>
+<hr>
+<h4>|loath - 厭う (unwilling, reluctant)</h4>
+<h4>|solicit - 懇願する (to beg, seek earnestly)</h4>
+<h4>|astute -　聡い (keen, shrewd)</h4>
+<h4>|advocate - 提唱する (to be in favor of, to support)</h4>
+<h4>|ineffectual - 失活する (not effective)</h4>
+</details>
+<details><summary>【DAY 4 - MORE THAN SILENCE】</summary>
+<hr>
+<h3>DAY 4 - MORE THAN SILENCE</h3>
+<h4></h4>
+<p>■偏見屋に対処するための隔離療法は彼らに無視以上のことをすると暗喩する。<br>
+The quarantine method for handling bigots implies more than giving them the silent treatment.</p>
+<p>■ファインバーグ教授は、集落関係組織にヘイト屋の<u><strong>悪い</strong></u>行為を<u><strong>精査する</strong></u>こと<br>
+Prof. Fineberg urges community-relations organizations to <u><strong>scrutinize</strong></u> the <u><strong>nefarious</strong></u> activities of hate-mongers</p>
+<p>■及び彼らについての情報を<u><strong>友好的な</strong></u>質問に見せかけて準備できているように強く勧める。<br>
+and to be prepared to furnish information about them to <u><strong>amicable</strong></u> inquirers.</p>
+<p>■少数過激派が来たときには、これらの組織は密かに彼を意見鋳型士に晒すべきだ。<br>
+When a rabble-rouser is coming, those organizations should privately expose him to opinion-molders.</p>
+<p>■加えて、人々に集団間の関係を改善する企画に参画するようその気にさせる建設的努力が払われるべきである。<br>
+In addition, constructive efforts should be taken to induce people to involve themselves in projects for improving intergroup relations.</p>
+<p>■<u><strong>うっとうしい</strong></u>差し迫った問題よりも大きいのは、<br>
+Bigger than the <u><strong>vexatious</strong></u> immediate problem is</p>
+<p>■そうした偏見屋の元を見つけ、我々の社会の部分を傷めるこの不吉な<u><strong>疾病</strong></u>に対抗して働く必要だ。<br>
+the need to find out the cause for such bigotry and to counteract this sinister* <u><strong>malady</strong></u> that afflicts* a segment of our society.</p>
+<h4></h4>
+<hr>
+<h4>|scrutinize - 精査する (examine closely)</h4>
+<h4>|nefarious - 悪い (villainous, vicious)</h4>
+<h4>|amicable - 友好的な (friendly, peaceful)</h4>
+<h4>|vexatious - 鬱陶しい (annoying)</h4>
+<h4>|malady - 疾病 (disease)</h4>
+</details>
+<details><summary>【WEEK 9 まとめ】</summary>
+<hr>
+<h3>WEEK 9 まとめ</h3>
+<table>
+<thead>
+<tr>
+<th>単語</th>
+<th>意味</th>
+<th>英語での説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>impresario</td>
+<td>興行主</td>
+<td>one who presents cultural series, oganizer</td>
+</tr>
+<tr>
+<td>extortion</td>
+<td>強要, 強奪</td>
+<td>getting money by threats</td>
+</tr>
+<tr>
+<td>adverse</td>
+<td>不利な, 好ましくない</td>
+<td>unfavorable, harmful</td>
+</tr>
+<tr>
+<td>asset</td>
+<td>資産, 財産</td>
+<td>a valuable thing to have</td>
+</tr>
+<tr>
+<td>bigot</td>
+<td>強い偏見を持つ人, 偏屈者</td>
+<td>a narrow-minded, prejudiced person</td>
+</tr>
+<tr>
+<td>blatant</td>
+<td>騒々しい, けばけばしい</td>
+<td>disagreeably loud, very showy</td>
+</tr>
+<tr>
+<td>entourage</td>
+<td>側近たち</td>
+<td>group of attendants</td>
+</tr>
+<tr>
+<td>virulent</td>
+<td>悪意に満ちた, 有毒の</td>
+<td>full of hate, harmful</td>
+</tr>
+<tr>
+<td>venom</td>
+<td>毒, 悪意, 恨み</td>
+<td>poison, spite, malice</td>
+</tr>
+<tr>
+<td>spew</td>
+<td>吐く, ぶちまける</td>
+<td>throw up, vomit, eject</td>
+</tr>
+<tr>
+<td>loath</td>
+<td>厭う</td>
+<td>unwilling, reluctant</td>
+</tr>
+<tr>
+<td>solicit</td>
+<td>懇願する</td>
+<td>to beg, seek earnestly</td>
+</tr>
+<tr>
+<td>astute</td>
+<td>聡い</td>
+<td>keen, shrewd</td>
+</tr>
+<tr>
+<td>advocate</td>
+<td>提唱する</td>
+<td>to be in favor of, to support</td>
+</tr>
+<tr>
+<td>ineffectual</td>
+<td>失活する</td>
+<td>not effective</td>
+</tr>
+<tr>
+<td>scrutinize</td>
+<td>精査する</td>
+<td>examine closely</td>
+</tr>
+<tr>
+<td>nefarious</td>
+<td>悪い</td>
+<td>villainous, vicious</td>
+</tr>
+<tr>
+<td>amicable</td>
+<td>友好的な</td>
+<td>friendly, peaceful</td>
+</tr>
+<tr>
+<td>vexatious</td>
+<td>鬱陶しい</td>
+<td>annoying</td>
+</tr>
+<tr>
+<td>malady</td>
+<td>疾病</td>
+<td>disease</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><a href="./index.html">戻る</a></p>
+
+  </body>
+</html>

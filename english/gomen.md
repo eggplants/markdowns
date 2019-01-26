@@ -1,0 +1,1 @@
+[![ごめんなさい](./gomen.gif)](./html/index.md)

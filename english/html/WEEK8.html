@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEEK8</title>
+    <style>.emoji {
+  max-width: 1em !important;
+}
+del {
+  text-decoration: none;
+  position: relative;
+}
+del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 26px;
+}
+span.critic.comment {
+  position: relative;
+}
+span.critic.comment::before {
+  content: '\1f4ac';
+  position: initial;
+}
+span.critic.comment > span {
+  display: none;
+}
+span.critic.comment:hover > span {
+  display: initial;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  max-height: 4em;
+  overflow: auto;
+}
+span.critic.comment:focus > span {
+  display: initial;
+  text-decoration: underline;
+  position: initial;
+  top: auto;
+  left: auto;
+  border: initial;
+  border-radius: initial;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #383a42;
+  background-color: #fafafa;
+  overflow: auto;
+}
+body > :first-child,
+body > div.update-preview > :first-child {
+  margin-top: 0;
+}
+body > p,
+body > div.update-preview > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+body > ul,
+body > div.update-preview > ul,
+body > ol,
+body > div.update-preview > ol {
+  margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+strong {
+  color: #000000;
+}
+del {
+  color: #5e616e;
+}
+a,
+a code {
+  color: #526fff;
+}
+img {
+  max-width: 100%;
+}
+blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #5e616e;
+  border-color: #d1d1d2;
+  border-width: 4px;
+}
+hr {
+  margin: 3em 0;
+  border-top: 2px dashed #d1d1d2;
+  background: none;
+}
+table {
+  margin: 1.5em 0;
+}
+th {
+  color: #000000;
+}
+th,
+td {
+  padding: 0.66em 1em;
+  border: 1px solid #d1d1d2;
+}
+code {
+  color: #000000;
+  background-color: #eaeaeb;
+}
+pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+kbd {
+  color: #000000;
+  border: 1px solid #d1d1d2;
+  border-bottom: 2px solid #c1c1c2;
+  background-color: #eaeaeb;
+}
+
+pre.editor-colors {
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+pre.editor-colors .gutter {
+  color: #657b83;
+  background-color: #eee8d5;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #dfd4b1;
+}
+pre.editor-colors .invisible-character {
+  color: #dcd0a9;
+}
+pre.editor-colors .indent-guide {
+  color: #dcd0a9;
+}
+pre.editor-colors .cursor {
+  border-color: #002b36;
+}
+pre.editor-colors .cursor-line {
+  background-color: rgba(243, 200, 84, 0.15);
+}
+pre.editor-colors .selection .region {
+  background-color: #eee8d5;
+}
+pre.editor-colors .fold-marker:after,
+pre.editor-colors .gutter .line-number.folded {
+  color: #d33682;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-color: #d33682;
+}
+.syntax--comment {
+  color: #93a1a1;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #93a1a1;
+}
+.syntax--string {
+  color: #2aa198;
+}
+.syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--constant.syntax--language {
+  color: #b58900;
+}
+.syntax--constant.syntax--character,
+.syntax--constant.syntax--other,
+.syntax--constant.syntax--support {
+  color: #cb4b16;
+}
+.syntax--variable {
+  color: #268bd2;
+}
+.syntax--keyword {
+  color: #859900;
+}
+.syntax--storage {
+  color: #859900;
+}
+.syntax--meta.syntax--class {
+  color: #268bd2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--function,
+.syntax--entity.syntax--name.syntax--section,
+.syntax--entity.syntax--name.syntax--type {
+  color: #268bd2;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #657b83;
+}
+.syntax--support.syntax--function {
+  color: #268bd2;
+}
+.syntax--support.syntax--function.syntax--builtin {
+  color: #859900;
+}
+.syntax--support.syntax--type,
+.syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--tag.syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--html,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--tag.syntax--punctuation.syntax--definition.syntax--end {
+  color: #93a1a1;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #b58900;
+  text-decoration: underline;
+}
+.syntax--invalid.syntax--illegal {
+  color: #dc322f;
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--meta.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--meta.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--control.syntax--directive,
+.syntax--source.syntax--cpp .syntax--keyword.syntax--control.syntax--directive {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--punctuation.syntax--string,
+.syntax--source.syntax--cpp .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--constant,
+.syntax--source.syntax--cpp .syntax--constant {
+  color: #cb4b16;
+}
+.syntax--source.syntax--c .syntax--constant.syntax--numeric,
+.syntax--source.syntax--cpp .syntax--constant.syntax--numeric,
+.syntax--source.syntax--c .syntax--constant.syntax--language.syntax--c,
+.syntax--source.syntax--cpp .syntax--constant.syntax--language.syntax--c {
+  color: #2aa198;
+}
+.syntax--source.syntax--c .syntax--storage,
+.syntax--source.syntax--cpp .syntax--storage {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--entity,
+.syntax--source.syntax--cpp .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--entity.syntax--name.syntax--function.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type,
+.syntax--source.syntax--cpp .syntax--support.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--c .syntax--support.syntax--type.syntax--posix-reserved,
+.syntax--source.syntax--cpp .syntax--support.syntax--type.syntax--posix-reserved {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--other.syntax--dot-access,
+.syntax--source.syntax--cpp .syntax--variable.syntax--other.syntax--dot-access {
+  color: #657b83;
+}
+.syntax--source.syntax--c .syntax--variable.syntax--parameter.syntax--preprocessor,
+.syntax--source.syntax--cpp .syntax--variable.syntax--parameter.syntax--preprocessor {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--variable,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--function,
+.syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--parameter.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--variable.syntax--other.syntax--readwrite {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--round,
+.syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--square {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--meta.syntax--delimiter {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #dc322f;
+}
+.syntax--source.syntax--coffee .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--coffee .syntax--constant.syntax--language.syntax--boolean {
+  color: #b58900;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--separator,
+.syntax--source.syntax--css .syntax--punctuation.syntax--terminator {
+  color: #657b83;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--begin,
+.syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--end {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--section.syntax--function {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--name {
+  color: #859900;
+}
+.syntax--source.syntax--css .syntax--attribute-name.syntax--class,
+.syntax--source.syntax--css .syntax--id {
+  color: #268bd2;
+}
+.syntax--source.syntax--css .syntax--pseudo-element,
+.syntax--source.syntax--css .syntax--pseudo-class {
+  color: #cb4b16;
+}
+.syntax--source.syntax--css .syntax--property-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric .syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--rgb-value {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant {
+  color: #2aa198;
+}
+.syntax--source.syntax--css .syntax--support.syntax--constant.syntax--media {
+  color: #dc322f;
+}
+.syntax--source.syntax--css .syntax--keyword.syntax--important {
+  color: #dc322f;
+}
+.syntax--source.syntax--less .syntax--keyword.syntax--unit,
+.syntax--source.syntax--scss .syntax--keyword.syntax--unit {
+  color: #2aa198;
+}
+.syntax--source.syntax--go .syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--go .syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #93a1a1;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--class .syntax--meta.syntax--class.syntax--identifier .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type.syntax--primitive.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--numeric {
+  color: #d33682;
+}
+.syntax--source.syntax--java .syntax--constant.syntax--other {
+  color: #cb4b16;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call {
+  color: #dc322f;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--meta.syntax--method {
+  color: #6c71c4;
+}
+.syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter {
+  color: #859900;
+}
+.syntax--source.syntax--java .syntax--punctuation.syntax--definition.syntax--method-parameters {
+  color: #586e75;
+}
+.syntax--source.syntax--js .syntax--comma {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--control.syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--dom {
+  color: #859900;
+}
+.syntax--source.syntax--js .syntax--delimiter + .syntax--dom {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--name {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--regexp {
+  color: #2aa198;
+}
+.syntax--source.syntax--js .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--support.syntax--constant {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--square {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--curly {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source {
+  color: #657b83;
+}
+.syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source > .syntax--embedded.syntax--punctuation {
+  color: #dc322f;
+}
+.syntax--source.syntax--js.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
+  color: #268bd2;
+}
+.syntax--source.syntax--js .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--instance {
+  color: #268bd2;
+}
+.syntax--source.syntax--js.syntax--rails .syntax--class {
+  color: #b58900;
+}
+.syntax--md .syntax--link .syntax--entity,
+.syntax--gfm .syntax--link .syntax--entity {
+  color: #6c71c4;
+}
+.syntax--md .syntax--list.syntax--ordered,
+.syntax--gfm .syntax--list.syntax--ordered {
+  color: #859900;
+}
+.syntax--md .syntax--list.syntax--unordered,
+.syntax--gfm .syntax--list.syntax--unordered {
+  color: #b58900;
+}
+.syntax--md .syntax--raw,
+.syntax--gfm .syntax--raw {
+  font-style: italic;
+}
+.syntax--md.syntax--support,
+.syntax--gfm.syntax--support {
+  color: #93a1a1;
+}
+.syntax--md.syntax--support.syntax--quote,
+.syntax--gfm.syntax--support.syntax--quote {
+  color: #6c71c4;
+}
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+}
+.syntax--markup.syntax--italic {
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #268bd2;
+}
+.syntax--markup.syntax--link {
+  color: #2aa198;
+}
+.syntax--markup.syntax--deleted {
+  color: #dc322f;
+}
+.syntax--markup.syntax--changed {
+  color: #b58900;
+}
+.syntax--markup.syntax--inserted {
+  color: #2aa198;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--type.syntax--function {
+  color: #cb4b16;
+}
+.syntax--source.syntax--php .syntax--storage.syntax--modifier {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--name.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--entity.syntax--other {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--variable {
+  color: #268bd2;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--array {
+  color: #dc322f;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--string {
+  color: #657b83;
+}
+.syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--variable {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--construct {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--support.syntax--function.syntax--array {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
+  color: #859900;
+}
+.syntax--source.syntax--php .syntax--keyword.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--other {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--function.syntax--magic {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--quantifier {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--control.syntax--import {
+  color: #cb4b16;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--language {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--character {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--constant.syntax--other {
+  color: #dc322f;
+}
+.syntax--source.syntax--python .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--variable {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--support.syntax--function.syntax--builtin {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--exception.syntax--python {
+  color: #b58900;
+}
+.syntax--source.syntax--python .syntax--support.syntax--type.syntax--python {
+  color: #268bd2;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--string {
+  color: #2aa198;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class.syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--python .syntax--storage.syntax--type.syntax--function {
+  color: #859900;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--definition.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
+  color: #657b83;
+}
+.syntax--source.syntax--python .syntax--punctuation.syntax--separator.syntax--parameters {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--meta.syntax--embedded .syntax--punctuation.syntax--section {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--string {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--comment {
+  color: #93a1a1;
+}
+.syntax--source.syntax--ruby .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--parameter {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--constant {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--boolean {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--instance .syntax--punctuation.syntax--definition {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--class {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--class.syntax--control {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--module {
+  color: #b58900;
+}
+.syntax--source.syntax--ruby .syntax--require .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other.syntax--special-method {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--other {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--control {
+  color: #859900;
+}
+.syntax--source.syntax--ruby .syntax--keyword.syntax--operator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--special-method {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--symbol {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--symbol .syntax--punctuation.syntax--definition {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--hashkey {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--hashkey .syntax--punctuation.syntax--definition {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--todo {
+  color: #d33682;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global .syntax--punctuation {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--block {
+  color: #268bd2;
+}
+.syntax--source.syntax--ruby .syntax--variable.syntax--self {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--separator {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--numeric {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--punctuation.syntax--section.syntax--regexp {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated {
+  color: #2aa198;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--punctuation .syntax--source.syntax--ruby {
+  color: #dc322f;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--array,
+.syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function {
+  color: #657b83;
+}
+.syntax--source.syntax--ruby .syntax--support.syntax--function.syntax--kernel {
+  color: #859900;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--declaration {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--comparison {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--class,
+.syntax--source.syntax--scala .syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--scala .syntax--val {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--variable {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--parameter {
+  color: #6c71c4;
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--control.syntax--flow {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--constant.syntax--language {
+  color: #586e75;
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--function.syntax--declaration {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--modifier.syntax--other {
+  font-weight: bold;
+}
+.syntax--source.syntax--scala .syntax--package {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--variable.syntax--import {
+  font-weight: normal;
+}
+.syntax--source.syntax--scala .syntax--type .syntax--bounds,
+.syntax--source.syntax--scala .syntax--type .syntax--class {
+  color: #6c71c4;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded).syntax--link.syntax--entity {
+  color: #268bd2;
+  text-decoration: underline;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--class,
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--parameter {
+  color: #586e75;
+}
+.syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--description {
+  color: #93a1a1;
+}
+.syntax--source.syntax--scala .syntax--embedded {
+  color: #374549;
+  font-style: italic;
+}
+.syntax--source.syntax--scala .syntax--embedded .syntax--margin,
+.syntax--source.syntax--scala .syntax--embedded .syntax--delimiters {
+  font-style: normal;
+}
+.syntax--source.syntax--ts .syntax--import .syntax--control,
+.syntax--source.syntax--tsx .syntax--import .syntax--control {
+  color: #cb4b16;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--name.syntax--type,
+.syntax--source.syntax--tsx .syntax--entity.syntax--name.syntax--type {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--entity.syntax--inherited-class,
+.syntax--source.syntax--tsx .syntax--entity.syntax--inherited-class {
+  color: #b58900;
+}
+.syntax--source.syntax--ts .syntax--support.syntax--type,
+.syntax--source.syntax--tsx .syntax--support.syntax--type {
+  color: #b58900;
+}
+
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+</style>
+
+  </head>
+  <body>
+    <h1>WEEK 8</h1>
+<details><summary>【DAY 1 - ENTER DR. THOMAS A. DOOLEY】</summary>
+<hr>
+<h3>DAY 1 - ENTER DR. THOMAS A. DOOLEY</h3>
+<h4></h4>
+<p>■1956年、ルック誌はトマス・ドーレイをその年最も傑出した10人の一人に選出した。<br>
+In 1956, Look Magazine named Thomas Dooley as one of the year’s ten most outstanding<br>
+men.</p>
+<p>■当時若干30歳手前にして、<br>
+Just under thirty years of age at the time,</p>
+<p>■ドーレイ医師は50万人の病人と<u><strong>飢餓状態の</strong></u>ヴェトナム難民への救護によって名を立てていた。<br>
+Dr. Dooley had already distinguished himself by caring for a half-million sick and <u><strong>emaciated</strong></u> Vietnamese refugees.</p>
+<p>■分断されたヴェトナム国で戦闘が始まった時、北の共産ヴェト・ミンが南に<u><strong>波のように進軍する</strong></u>に、数千の難民が彼らに先立って走った。<br>
+When fighting broke out in the divided country of Viet Nam, the northern Communist Viet-Minh forces <u><strong>surged</strong></u> southward, scattering thousands of refugees before them.</p>
+<p>■その時、ドーレイ医師は中尉で、日本、横須賀の<u><strong>静かな</strong></u>海軍隔離病院に配属されていた。<br>
+At the time, Dr. Dooley was a lieutenant, assigned to a <u><strong>tranquil</strong></u> naval hospital in Yokosuka, Japan.</p>
+<p>■彼は即座に、サイゴンにある<u><strong>安全地帯</strong></u>に運搬するために選ばれていた海軍の船での任務に志願した。<br>
+Forthwith* he volunteered for duty on a navy ship that had been chosen to transport the refugees to <u><strong>sanctuary</strong></u> in Saigon.</p>
+<p>■ドーレイの未来への幕は<u><strong>上がり</strong></u>始めた。<br>
+The curtain was beginning to <u><strong>ascend</strong></u> on Dooley’s real career.</p>
+<h4></h4>
+<hr>
+<h4>|emaciated - 異常なほど痩せ衰えた, やつれた (abnormally thin, wasted away)</h4>
+<p>The <u><strong>emaciated</strong></u> residents of the Warsaw Ghetto managed to win several skirmishes from the Nazis.</p>
+<h4>|surge - 揺れる, 波のように押し寄せる (to rush suddenly)</h4>
+<p>Chicago put its heaviest players up front, but they were helpless as the Giant’s line <u><strong>surged</strong></u> toward them.</p>
+<h4>|tranquil - 静かな, 穏やかな (quiet)</h4>
+<p>A firefighter terminated the <u><strong>tranquil</strong></u> climate of the neighborhood.</p>
+<h4>|sanctuary - 避難所, 聖域, 庇護 (shelter)</h4>
+<p>When Richard Ⅲ violated the <u><strong>sanctuary</strong></u> of the church to seize the princes, he exceeded his jurisdiction.</p>
+<h4>|ascend - 登る, 上がる (to rise)</h4>
+<p>Inexorably the determined climber began to <u><strong>ascend</strong></u> the Himalayan peak.</p>
+</details>
+<details><summary>【DAY 2 - DOOLEY'S MISSION】</summary>
+<hr>
+<h3>DAY 2 - DOOLEY’S MISSION</h3>
+<h4></h4>
+<p>■難民船に乗ると、ドーレイの運命は形を取り始めた。<br>
+Aboard the refugee ship, Dooley’s destiny took shape.</p>
+<p>■彼は現地民を<u><strong>苦しめる</strong></u> <u><strong>栄養失調</strong></u>、疾病、無知及び恐れを痛い程知ることとなった。<br>
+He became painfully cognizant* of the <u><strong>malnutrition</strong></u>, disease, ignorance, and fear that <u><strong>afflicted</strong></u> the natives.</p>
+<p>■加えて、いかに共産主義者たちがその反アメリカ的広報の拡大を図るのに熱心であったかを彼は知覚した。<br>
+In addition, he discerned* how active the Communists had been in spreading their anti-American propaganda.</p>
+<p>■トム・ドーレイは、ハイフォンへの避難所建立を懸命にやり出した。<br>
+Tom Dooley pitched in to build shelters in Haiphong,</p>
+<p>■現地の哀れなヴエトナミーズを慰めるために、強大なヴエトミン軍に<u><strong>包囲され</strong></u>陥落するまで。<br>
+and to comfort the poor Vietnamese there before that <u><strong>besieged</strong></u> city fell to the powerful Viet-Minh forces.</p>
+<p>■彼は耐えねばならなかった多くの物資の<u><strong>窮乏</strong></u>も余り気にしていないようだった。<br>
+He was seemingly unconcerned by the many <u><strong>privations</strong></u> he had to endure.</p>
+<p>■その精勤によって、ドーレイは米国海軍メリット勲章を受章した。<br>
+For his services, Dooley received the U.S. Navy’s Legion of Merit.</p>
+<p>■彼はこの興奮する経験を「我等を悪しき者からお守り下さい」（という本）に語った。<br>
+He told the story of this exciting experience in Deliver Us from Evil,</p>
+<p>■ヴィエトナミーズの窮乏及び共産主義の<u><strong>邪悪な</strong></u>脅威についてアメリカに注意喚起したベストセラーの<br>
+a best seller that alerted America to the plight of the Vietnamese as well as to the <u><strong>sinister</strong></u> menace of communism.</p>
+<h4></h4>
+<hr>
+<h4>|malnutrition - 栄養失調 (faulty or adequate diet)</h4>
+<p>The emaciated prisoners were obviously suffering from advanced <u><strong>malnutrition</strong></u>.</p>
+<h4>|afflict - 苦しめる, 悩ます (to trouble greatly, to distress)</h4>
+<p>Citizens of several Kentucky mountain communities are afflicted by the worst poverty in the nation.</p>
+<h4>|besiege - 包囲する, 襲う (to surround, hem in)</h4>
+<p>By running up a white flag, the <u><strong>besieged</strong></u> troops indicated their desire to withdraw from the fray.</p>
+<h4>|privation - (必要最低限なものの)欠乏, 喪失 (lack of necessities)</h4>
+<p>Albert Schweitzer endured considerable <u><strong>privation</strong></u> as a jungle doctor.</p>
+<h4>|sinister - 邪悪な, 縁起の悪い (evil, ominous)</h4>
+<p>The stool pigeon, the detective’s confidant, told him about the <u><strong>sinister</strong></u> plot.</p>
+</details>
+<details><summary>【DAY 3 - STYMIED BY PERSONAL SICKNESS】</summary>
+<hr>
+<h3>DAY 3 - STYMIED BY PERSONAL SICKNESS</h3>
+<h4></h4>
+<p>■1956年の広大な啓蒙の旅を終え、ドーレイ医師は移動可能な医療団を立ち上げるためラオスに戻った。<br>
+After an extensive lecture tour in 1956, Dr. Dooley returned to Laos to set up a mobile medical unit.</p>
+<p>■理由はジェネヴァ条約が軍人の入国を禁じていたため、彼は海軍を辞し、一市民として働くため赴いた。<br>
+Because the Geneva Agreement barred the entrance of military personnel to the country, he resigned from the Navy and went to work as a civilian.</p>
+<p>■その話は「明日の縁」に語られている。<br>
+That story is told in The Edge of Tomorrow.</p>
+<p>■翌年、悪化する病状にもかかわらず、<u><strong>神出鬼没の</strong></u>ドーレイは自身の旧敵を<u><strong>妨害する</strong></u>ために、ムオンシンの<strong>人里離れた</strong>村に入った。<br>
+Next year, despite a growing illness, the <u><strong>ubiquitous</strong></u> Dooley turned up in the <u><strong>remote</strong></u> village of Muong-Sing, attempting to <u><strong>thwart</strong></u> his traditional enemies:</p>
+<p>■－疾病、不衛生、無知蒙昧、飢餓－(をやっつけようと)また、共産主義の拡大を抑えたいとの望みから<br>
+— disease, dirt, ignorance, starvation — and hoping to quell* the spread of communism.</p>
+<p>■しかし、その訓練された医者としての目は、すぐに、胸部と背部の痛みが<u><strong>凶悪な</strong></u>ガンの<u><strong>兆候</strong></u>であると見抜いた。<br>
+But his trained medical eye soon told him that the pain in his chest and back was a <u><strong>harbinger</strong></u> of a <u><strong>malignant</strong></u> cancer.</p>
+<h4></h4>
+<hr>
+<h4>|ubiquitous - 遍在する, 至るところにある (being everywhere at the same time)</h4>
+<p>Sprinting all over the court, the <u><strong>ubiquitous</strong></u> referee called one foul after another.</p>
+<h4>|remote - 遠く離れた, 遠方の (distant, hidden away)</h4>
+<p>Ben’s reprehensible table manners led his fraternity brothers</p>
+<h4>|thwart - 妨害する,じゃまする (to hinder, defeat)</h4>
+<p>In an attempt to <u><strong>thwart</strong></u> the voracious ants, he surrounded his house with a moat of burning oil.</p>
+<h4>|harbinger - 先駆者,前ぶれ,前兆 (a forerunner, advance notice)</h4>
+<p>The excellent soup was a <u><strong>harbinger</strong></u> of the delicious meal to follow.</p>
+<h4>|malignant - 悪意のある, 悪性の, 致死性のある (likely to cause death)</h4>
+<p>The surgeon finally located the <u><strong>malignant</strong></u> tumor that had afflicted his parent for many months.</p>
+</details>
+<details><summary>【DAY 4 - "PROMISES TO KEEP"】</summary>
+<hr>
+<h3>DAY 4 - “PROMISES TO KEEP”</h3>
+<h4></h4>
+<p>■1959年8月～1961年1月に死ぬまで、ドーレイは殆ど継続的な、<u><strong>責苦にかけられるような</strong></u>痛みに襲われた。<br>
+From August, 1959 until his death in January, 1961, Dooley suffered almost continuous, <u><strong>excruciating</strong></u> pain.</p>
+<p>■普段180ポンド（約81キログラム）あった体重は半減し、鎮痛剤も最早効かなかった。<br>
+His normal weight of 180 was cut in half, and even the pain-killing drugs could no longer bring relief.</p>
+<p>■自分の命が長くないことを知り、ドーレイ医師は<u><strong>休み</strong></u>なくMEDICOのために働いた。<br>
+Knowing that he did not have long to live, Dr. Dooley worked without <u><strong>respite</strong></u> on behalf of MEDICO,</p>
+<p>■世界の病人及び貧者に医療援助及び希望をもたらすべく彼が創立した組織である、<br>
+the organization he had founded to bring medical aid and hope to the world’s sick and needy.</p>
+<p>■<u><strong>不安な</strong></u>日々の中で、彼の頭の中ではロバ－・フロストによる一節が<u><strong>響き</strong></u>続けていた。<br>
+The lines of Robert Frost kept reverberating in his mind during those <u><strong>fretful</strong></u> days:</p>
+<p>■「森は美しく、暗く、深い。だが私には守らねばならぬ約束がある。そして往くべき道がある、眠りに就く前に。」<br>
+“The woods are lovely, dark and deep. But I have promises to keep/ And miles to go before I sleep.”</p>
+<p>■彼がついに<u><strong>斃れた</strong></u>時、世界中の何百万もの人々が悲報に接し、驚愕し、悲しみに打たれた。<br>
+When he finally <u><strong>succumbed</strong></u>, millions throughout the world were stunned and grief-stricken by the tragedy.</p>
+<h4></h4>
+<hr>
+<h4>|excruciating - 苦しい, 責苦にかけられるような (agonizing, torturing)</h4>
+<p>With <u><strong>excruciating</strong></u> slowness, the minute hand inched its way around the clock.</p>
+<h4>|respite - 一休み, 遅延, 猶予 (an interval of relief, delay)</h4>
+<p>The voluble insurance salesman gave my father no <u><strong>respite</strong></u>.</p>
+<h4>|reverberating - 反響する (reechoing, resounding)</h4>
+<p>The rescue team heard the miner’s voice <u><strong>reverberating</strong></u> through the caves.</p>
+<h4>|fretful - いらいらする, 腹が立ちやすい (worrisome, irritable)</h4>
+<p>Around income tax time <u><strong>fretful</strong></u> faces are ubiquitous.</p>
+<h4>|succumb - 屈する, 負ける, 斃れる (to give way, yield)</h4>
+<p>Besieged by debts, the corporation finally had to <u><strong>succumb</strong></u> to bankruptcy.</p>
+</details>
+<details><summary>【WEEK 8 まとめ】</summary>
+<hr>
+<h3>WEEK 8 まとめ</h3>
+<table>
+<thead>
+<tr>
+<th>単語</th>
+<th>意味</th>
+<th>英語での意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>emociated</td>
+<td>異常なほどやせ衰えた, やつれた</td>
+<td>abnormally thin, wasted away</td>
+</tr>
+<tr>
+<td>surge</td>
+<td>揺れる, 波のように押し寄せる</td>
+<td>to rush suddenly</td>
+</tr>
+<tr>
+<td>tranquil</td>
+<td>静かな, 穏やかな</td>
+<td>quiet</td>
+</tr>
+<tr>
+<td>sanctuary</td>
+<td>避難所, 聖域, 庇護</td>
+<td>shelter</td>
+</tr>
+<tr>
+<td>ascend</td>
+<td>登る, 上がる</td>
+<td>to rise</td>
+</tr>
+<tr>
+<td>malnutrition</td>
+<td>栄養失調</td>
+<td>faulty or adequate diet</td>
+</tr>
+<tr>
+<td>afflict</td>
+<td>苦しめる, 悩ます</td>
+<td>to trouble greatly, to distress</td>
+</tr>
+<tr>
+<td>besiege</td>
+<td>包囲する, 襲う</td>
+<td>to surround, hem in</td>
+</tr>
+<tr>
+<td>prvation</td>
+<td>(必要最低限なものの)欠乏, 喪失</td>
+<td>lack of necessities</td>
+</tr>
+<tr>
+<td>sinister</td>
+<td>不吉な, 縁起の悪い</td>
+<td>evil, omonous</td>
+</tr>
+<tr>
+<td>ubiquitous</td>
+<td>遍在する, 至るところにある</td>
+<td>being everywhere at the same time</td>
+</tr>
+<tr>
+<td>remote</td>
+<td>遠く離れた, 遠方の</td>
+<td>distant, hidden away</td>
+</tr>
+<tr>
+<td>thwart</td>
+<td>妨害する, 邪魔する</td>
+<td>to hinder, defeat</td>
+</tr>
+<tr>
+<td>harbinger</td>
+<td>先駆者, 前触れ, 前兆</td>
+<td>a forerunner, advance notice</td>
+</tr>
+<tr>
+<td>malignant</td>
+<td>悪意のある, 悪性の, 致死性のある</td>
+<td>likely to cause death</td>
+</tr>
+<tr>
+<td>excruciating</td>
+<td>苦しい, 責苦にかけられるような</td>
+<td>agonizing, torturing</td>
+</tr>
+<tr>
+<td>respite</td>
+<td>一休み, 遅延, 猶予</td>
+<td>an interval of relief, delay</td>
+</tr>
+<tr>
+<td>reverberating</td>
+<td>反響する</td>
+<td>reechoing, resounding</td>
+</tr>
+<tr>
+<td>fretful</td>
+<td>いらいらする, 腹が立ちやすい</td>
+<td>worrisome, irritable</td>
+</tr>
+<tr>
+<td>succumb</td>
+<td>屈する, 負ける, 斃れる</td>
+<td>to give way, yield</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><a href="./index.html">戻る</a></p>
+
+  </body>
+</html>
