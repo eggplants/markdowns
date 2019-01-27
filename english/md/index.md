@@ -5,7 +5,7 @@
 ![study](https://2.bp.blogspot.com/-wSQ2eVTRAeM/VkLHVmYCEQI/AAAAAAAA0VQ/vgfU8DURzb0/s800/studynight_boy.png =200x200)
 <div style="text-align: center;">▲男の子が鉢巻を巻いて、夜にテスト勉強をしているイラストです。</div>
 <br><br>
-|01/26　単語別文章の訳やる
+|01/28 翻訳9以外終わり
 
 ----
 ##コンテンツ一覧

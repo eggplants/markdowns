@@ -31,23 +31,28 @@ There was little tangible* evidence to go on, but the police remained <u>**sangu
 ----
 ####|poignant - 強く心に訴える, 胸を刺す様な (moving, painful to the feelings)
 
+■その説教は**迫真**のもので、生意気な非行少年の瞳から涙を溢れさせるには十分だった。
 The sermon was <u>**poingnant**</u> enough to bring tears to the brash delinquent's eyes.
 
 ####|inundate - 氾濫させる, 押し寄せる (to flood)
 
+■ボートがもう少しで**水浸しになりそう**であったのに、その船長は助けを無線で呼ぶことを忌避した。
 Even through his boat was almost <u>**inundated**</u>, the skipper was loath to radio for help.
 
 ####|fruitless - 実を結ばない, 無益な (useless)
 
+■国家の主導権を握ろうという**無益な**試みの後、その売国奴は投獄された。
 After a <u>**fruitless**</u> attempt to wrest control of the government, the traitors were incarcerated.
 
 ####|garbled - 要領を得ない, 混乱した (confused, mixed up)
 
+■**混乱した**伝言だったのにもかかわらず、要点は十分明瞭だった。
 Although the message was <u>**garbled**</u>, its salient points were clear enough.
 
 ####|sanguine - 陽気な, 楽天的な (optimistic)
 
-Because the mailgnancy had gone unchecked, the surgeons were not <u>**sanguine**</u> about the patient's chances.
+■悪性腫瘍はチェックが外れた(無くなった)のにもかかわらず、外科医は患者の機会について**楽天的で**なかった。
+Because the malignancy had gone unchecked, the surgeons were not <u>**sanguine**</u> about the patient's chances.
 
 </details>
 <details><summary>【DAY 2 - NO RELIEF】</summary>
@@ -81,22 +86,27 @@ The excruciating* vigil continued.
 ----
 ####|phlegmatic - 動きのない, 冷淡な (calm, hard to rouse to action)
 
+■ハリエットの言語道断の過ちは彼女の**冷淡な**雇用主の仕事でさえも中断させた。
 Harriet's egregious error disturbed even her <u>**phlegmatic**</u> employer.
 
 ####|corroborate - (証拠などによって)確証する, 強める (confirm, support)
 
+■シンドラーの悪い共犯者でさえ彼のアリバイを**確証づける**のを拒んだ。
 Even the swendler's nefarious accomplice refused to <u>**corroborate**</u> his alibi.
 
 ####|comprehensive - 包括的な, 徹底的な, わかりやすい (thorough)
 
+■職を得るために、１０ページ閉じの**包括的な**質問を閉じ込む骨折り仕事を経験する必要があったのだった。
 In order to get the job, you had to go through the drudgery of filing out a ten-page <u>**comprehensive**</u> questionnaires.
 
 ####|zealous - 熱狂的な (enthusiastic)
 
+■その基金の発起人はとても**熱狂的**で、「救世軍サンタ」からも金をせがんだ。
 The fund raiser was so <u>**zealous**</u> that he solicited money from a Salvation Army Santa Claus.
 
 ####|coerce - 強いる ,強要する (to force)
 
+■逃げのうまい逃亡者は、彼の代理人によって**強制**されて降伏しました。
 The elusive fugitive was <u>**coerced**</u> by his attorney into surrendering.
 </details>
 <details><summary>【DAY 3 - THE POLICE FIND THE DOG】</summary>

@@ -27,6 +27,7 @@ When the phone rang, he <u>**recoiled**</u> with fear — it was his wife and sh
 ----
 ####|inclement - (天気が)荒れ模様の (unfavorable, stormy)
 
+■彼女は**荒れ模様の**
 She blamed her absence from the game on the <u>**inclement**</u> whether, but we knew that was sour grape.
 
 ####|peruse - 熟読する, 精読する (to read carefully)

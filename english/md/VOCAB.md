@@ -19,7 +19,7 @@
 | egregious   | 実にひどい, 言語道断な     |remarkably bad|
 | distraught  | ひどく狼狽した, 気の狂った |mentally confused, crazed|
 | duplicity   | 過ち, ずる                 |cunning, trickery|
-| acrimonious | 苦々しい                   |bitter|
+| acrimonious | 苦々しい, 辛辣な                   |bitter|
 | paucity     | 欠如, 不足                 |scarcity|
 | elicit      | 引き出す, 誘い出す         |to draw forth|
 | pernicious  | 有害な, 害のある           |hermful, causing injury|

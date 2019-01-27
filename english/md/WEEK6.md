@@ -33,22 +33,27 @@ If it continues to do well, it could have a pernicious effect upon the umbrella 
 ----
 ####|affluent - 豊富な, 富んだ (rich)
 
+■集税官からのの強制の元で、「あいつはほんとは裕福なんだ」とその物乞いは認めたのだった。
 Under duress from the tax officer, the beggar admitted that he was truly <u>**affluent**</u>.
 
 ####|feasible - 実現可能な, ありそうな (possible)
 
+■電気自動車の製造はありそうなことだが、ではどんだけ長い外延のコードが必要になるのやら？
 It's <u>**feasible**</u> to build an electric auto, but wouldn't you need a terribly long extension cord?
 
 ####|discern - 見通す, 知覚する (perceive)
 
+■我々は街灯を**認める**ことが出来た時、自らが遂に無事であることを知ったのだった。
 When we could <u>**discern**</u> the city lights, we knew we were safe at last.
 
 ####|sally - 打って出る, (逆襲に)出撃する (suddenly rush forth)
 
+■囚人の中には、「他の囚人たちがゲームへと**繰り出す**間の動乱」を画策する者共も居た。
 Some prisoners planned a disturbance while others would <u>**sally**</u> toward the game.
 
 ####|consternation - ひどい驚き, 仰天 (dismay)
 
+■軍曹が**仰天**した事には、危険な任務へ志願するものが多数居たことであった。
 To the <u>**consternation**</u> of the sergeant, there was a paucity of volunteers for the dangerous mission.
 
 </details>
@@ -86,22 +91,27 @@ Tomorrow we are going to start on a computer that will enable us to measure the 
 ----
 ####|precocious - 早熟な, 発達の早い, 早咲きの (reaching maturity early)
 
+■シェイクスピアの劇中の童たちは、早熟過ぎて、まるで老爺のような印象を受ける。
 The children in Shakespeare's plays are so <u>**precocious**</u> that they all sound like grandparents.
 
 ####|perfunctory - おざなりの, いいかげんな (done without care, superficial)
 
+■エディスは大晦日パーティーをするほど新世紀へおざなりな注意しか向けていなかったのだった。
 Edith gave only <u>**perfunctory**</u> attention to the new millennium, skipping our New Year's Eve party.
 
 ####|chagrin - 無念, 悔しさ (feeling of disappointment, humiliation)
 
+■多くの納税者の無念であることには、市民の中に罪を課されずに行政を欺くものがいるようであるということだ。
 To the <u>**chagrin**</u> of many taxpayers, some citizens seem to cheat the government with impunity.
 
 ####|perverse - 非を認めない, あまのじゃくな, ひねくれた (contrary, persisting in error)
 
+■私が弟の算数の間違いを正している時弟はあまりにも**非を認めず**、頑なに「自分は正しいのだ」と主張した。
 When I correct my kid brother's math errors, he is <u>**perverse**</u> enough to insist that he is right.
 
 ####|deride - バカにする, 嘲笑する (to ridicule, scoff)
 
+ライト兄弟は、ある無神論者がその努力を**嘲笑した**時も取り乱しはしなかった。
 The Wright brothers didn't become distraught when a skeptic would <u>**deride**</u> their work.
 
 </details>
@@ -136,22 +146,27 @@ I’m afraid that this is one pill I’ll have to <u>**eschew**</u> from chewing
 ----
 ####|disparage - 軽蔑する, そしる (to discredit, belittle)
 
+■その裕福な主人は、瑣末な経営者の努力を、「あの種の競争相手に私は永久に耐え得る」と言って**そしる**。
 The affluent store-owner <u>**disparages**</u> the efforts of his small competitor, saying that he could always tolerate that kind of rivalry.
 
 ####|laudable - 見上げた, 賞賛に値する (praiseworthy)
 
+■その逆説は、(レ・ミゼラブルの)ジャベール(警部)の、ジャン・バルジャンに対する容赦無い追求が**見上げた**ものでもあり、そして卑劣なものであるというものである。
 The paradox is that Javert's inexorable pursuits of Jean Valjean was both <u>**laudable**</u> and despicable.
 
 ####|fiasco - (野心的な企ての滑稽な)大失敗 (complete failure)
 
+■その辛辣な手紙の中で彼女の父は、「その計画は完全な大失敗だな」と評した。
 In an acrimonious letter, her father described the project as a complete <u>**fiasco**</u>.
 
 ####|masticate - 噛む (to chew up)
 
+■消化の一助に、あなたは一口のお肉につき1ダースは噛まなければならない。
 To aid in digestion, you must <u>**masticate**</u> each piece of meat one dozen times.
 
 ####|eschew - (意図的に)避ける, 慎む (avoid)
 
+■一度は石灰光(=注目の的)求めたのだが、今彼は全ての取材を**避けている**。
 Once he sought the limelight, but now he <u>**eschew**</u> all interviews.
 
 </details>
@@ -180,23 +195,26 @@ I am <u>**dubious**</u> about the existence of those perfect products, but then 
 ----
 ####|quell - 鎮める, 鎮圧する (put an end to)
 
+■暴動を**鎮圧する**ために、警察は催涙ガスを用い、以後打って出たのだった。
 In order to <u>**quell**</u> the riot, the police sallied forth with tear gas.
 
 ####|voluble - 口達者な, おしゃべりな, 流暢な (talkative)
 
+■私は**おしゃべりな**理髪店の所為で居眠り出来なかったのだ。
 I could not doze in the chair because of the <u>**voluble**</u> barbar.
 
 ####|confidant(e) - 腹心の友,親友(-eは女性) (one to whom you confide your secrets)
 
-
+■十代の男の子の父親は彼の真の良き**親友**となるべきである。
 A teenage boy's father should be his true <u>**confidant**</u>.
 ####|obsolescence - 廃れたもの, 旧来のもの (process of wearing out)
 
-
+■その**旧態依然のもの**は体のいい「かもの客」への甚だしい侮辱としてみなされる様な多くの製品に組こまれている。
 The <u>**obsolescence**</u> built into many products could be regarded as a flagrant insult toward the duped consumer.
 
 ####|dubious - 疑っている, いかがわしい (doubtful)
 
+■二枚舌が露顕した時、ジュリーはエドの無実を**疑う**ようになってしまった。
 When the duplicity was revealed, the jury became <u>**dubious**</u> about Ed's innocence.
 
 </details>
