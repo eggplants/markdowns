@@ -1,1 +1,1 @@
-[![ごめんなさい](./gomen.gif)](./html/index.md)
+[![ごめんなさい](./gomen.gif)](./md/index.md)
