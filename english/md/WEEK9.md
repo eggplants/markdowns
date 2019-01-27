@@ -137,13 +137,23 @@ Debating with such warped minds is not feasible* and only tends to exacerbate* t
 ----
 ####|loath - 厭う (unwilling, reluctant)
 
+Since we felt that ruling was arbitray, we were **loathed** to obey it.
+
 ####|solicit - 懇願する (to beg, seek earnestly)
+
+Daily the volunteers went out to **solicit** funds for the indigent families.
 
 ####|astute -　聡い (keen, shrewd)
 
+My neighbor was **astute** enough to discern the adverse features of the mortgage.
+
 ####|advocate - 提唱する (to be in favor of, to support)
 
+The general was sure to **advocate** that we give the enemy no respite from the bombing.
+
 ####|ineffectual - 失活する (not effective)
+
+The play was so blatantly bad that the impresario fired its **ineffectual** director.
 
 </details>
 <details><summary>【DAY 4 - MORE THAN SILENCE】</summary>
@@ -177,13 +187,23 @@ the need to find out the cause for such bigotry and to counteract this sinister*
 ----
 ####|scrutinize - 精査する (examine closely)
 
+No sooner did the lawyer **scrutinizes** the extortion note than she called the police.
+
 ####|nefarious - 悪い (villainous, vicious)
+
+We were distraught upon hearing the venom spewed forth by the **nofarious** bigot.
 
 ####|amicable - 友好的な (friendly, peaceful)
 
+Our **amicable** relations with Latin America are an asset to hemispheric trade.
+
 ####|vexatious - 鬱陶しい (annoying)
 
+The **vexatious** buzzing of the mosquitoes as they surged about our heads nearly drove us insane.
+
 ####|malady - 疾病 (disease)
+
+Once the virulent **malady** had run its course, my temperature dropped.
 
 </details>
 <details><summary>【WEEK 9 まとめ】</summary>
