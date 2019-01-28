@@ -1,8 +1,8 @@
 #WEEK 10
-<details><summary>【DAY 1 - JERRY HART'S SIXTH SENCE】</summary>
+<details><summary>【DAY 1 - JERRY HART'S SIXTH SENSE】</summary>
 
 ----
-###DAY 1 - JERRY HART'S SIXTH SENCE
+###DAY 1 - JERRY HART'S SIXTH SENSE
 ####
 
 ■ある落ち着かない感じがジェリー・ハートを一日苛んだ。
@@ -27,24 +27,28 @@ When the phone rang, he <u>**recoiled**</u> with fear — it was his wife and sh
 ----
 ####|inclement - (天気が)荒れ模様の (unfavorable, stormy)
 
-■彼女は**荒れ模様の**
+■彼女は<u>**荒れ模様の**</u>天候の中での試合を休むことを非難したが、我々はそんなのは「酸い葡萄」(に過ぎない)とわかっていた。
 She blamed her absence from the game on the <u>**inclement**</u> whether, but we knew that was sour grape.
 
 ####|peruse - 熟読する, 精読する (to read carefully)
 
+■父による説教が始まった後、彼は毎日求人広告を<u>**熟読する**</u>様になった。
 After being admonished by his father, he began to <u>**peruse**</u> the want ads daily.
 
 ####|premonition - 予感 (forewarning)
 
+■エレンは、黒猫と巡り合った時に「災い」の<u>**予感**</u>を持った。
 When the black cat crossed her path, Ellen had a <u>**premonition**</u> of disaster.
 
 ####|desist - やめる, 思いとどまる (cease)
 
-The pickets promulgated a warning that they would not <u>**desist**</u> in their efforts to enhance their standard of living.
+■(労働争議の時, 組合側から出すスト破り防止のための)監視員らは、生活水準の向上の為に、我々の努力は不<u>**断**</u>なのだという訓戒を公表した。
+The pickets promulgated a warning that they would not <u><u>**desist**</u></u> in their efforts to enhance their standard of living.
 
 ####|recoil - 後退する, 引き返す (draw back)
 
-As the snake prepared to snake, the girls <u>**recoiled**</u> in honor.
+■まるで蛇が襲撃のため待ち構える様に、その女の子はゾッとする思いで<u>**後退した**</u>。
+As the snake prepared to strike, the girls <u>**recoiled**</u> in horror.
 
 </details>
 <details><summary>【DAY 2 - CRISIS!】</summary>
@@ -75,22 +79,27 @@ Little Bobby was on his bed, surrounded by a doctor, a policeman, Jerry’s <u>*
 ----
 ####|pertinent - 適切な, しっくりとした (to the point)
 
+■その裁判の間、抜け目のない弁護士は鍵となる証拠から<u>**適切な**</u>情報を誘い出せたのだった。
 During the trial the astute lawyer was able to elicit the <u>**pertinent**</u> information from the key witness.
 
 ####|mastiff - 大きな犬([犬種.](https://wanwans.com/new/mastiff) 番犬用) (large dog)
 
+■神経質な隣人は、こそ泥を脅すために、喧嘩っ早い大型犬を購入した。
 My nervous neighbor brought a pugnacious <u>**mastiff**</u> to frighten burglars.
 
 ####|obsess - 取り付く, つきまとう (to haunt, preoccupy)
 
+■画家になるアイデアにその株式仲買人は<u>**取り憑か**</u>れた。
 The stockbroker was <u>**obsessed**</u> with the idea of becoming a painter.
 
 ####|doleful - 悲しげな, 陰鬱な (sad, melancholy)
 
+■<u>**陰鬱な**</u>諸表情が、選挙の夜に司令所を通じ多く見られた。
 <u>**Doleful**</u> expressions abounded throughout headquarters on the night of the election.
 
 ####|wan - (病気・悩みで)青ざめた, 血の気のない (sickly pale)
 
+■緊張状態の後、普段は血色の良い彼の顔は<u>**青ざめ**</u>、疲れ切っていた。
 After the tension, his normally ruddy face wan <u>**wan**</u> and tired.
 
 </details>
@@ -128,29 +137,34 @@ Mr. and Mrs. Hart sat down to think about their next step.
 ----
 ####|histrionics - 感情の現れ, 芝居がかったしぐさ (display of emotions)
 
-Saying that he would not tolerate her <u>**histrionics**</u>, the director fired the temperamental actess.
+■彼が<u>**感情の現れ**</u>を抑制できないと言うので、監督はその気まぐれな俳優を首にした。
+Saying that he would not tolerate her <u>**histrionics**</u>, the director fired the temperamental actress.
 
 ####|elusive - わかりにくい,記憶しにくい (hard to grasp)
 
+■彼の生涯で、幸福は**分かりにくい**ものだと感得したが、富は簡単に離れるものだ。
 All his life he found happiness <u>**elusive**</u>, but wealth easy to come by.
 
 ####|frustrate - 妨げる, 邪魔する (counteract, foil, thwart)
 
-The wardan <u>**frustrated**</u >the prisoners' attempt to escape by adding more guards.
+■管理人は守衛を増やすことで囚人たちの脱獄する試みを<u>**妨げた**</u>。
+The warden <u>**frustrated**</u>the prisoners' attempt to escape by adding more guards.
 
 ####|symptomatic - 前兆となる, 兆候的な (having to do with signs or symptoms, indicative)
 
-The sordid rioting was <u>**symptomatic**</u> of the problems facing the learge cities.
+■卑劣な騒乱は大都市の直面する問題の<u>**前兆だった**</u>。
+The sordid rioting was <u>**symptomatic**</u> of the problems facing the large cities.
 
 ####|interject - 不意にさしはさむ (insert, interrupt)
 
-Most viewers hate it when a commercial is <u>**interjected**</u> into a suspence drama.
+■多くの視聴者は、コマーシャルがサスペンスドラマに<u>**闖入してくる**</u>時が大嫌いだ。
+Most viewers hate it when a commercial is <u>**interjected**</u> into a suspense drama.
 
 </details>
-<details><summary>【DAY 4 - THE PERTIENT FACES ABOUT RABIES】</summary>
+<details><summary>【DAY 4 - THE PATIENT FACES ABOUT RABIES】</summary>
 ----
 
-###DAY 4 - THE PERTIENT FACES ABOUT RABIES
+###DAY 4 - THE PATIENT FACES ABOUT RABIES
 ####
 
 ■「その病気について、基本的な情報を下さい、ドクター」<u>**身動きできない**</u>息子の姿に目を向けながらジェリーが言った。
@@ -159,13 +173,13 @@ Most viewers hate it when a commercial is <u>**interjected**</u> into a suspence
 ■「ええと、ご存じのとおり、病気は以前「恐水病」（水への恐怖）と呼ばれていました。理由は症状の一つが液体の嚥下不能であるためです。
 “Well, as you know, the malady* used to be called ‘hydrophobia’ (fear of water) because one of the symptoms is an inability to swallow liquids.
 
-■実際、この病気は感染した動物の唾液にに含まれる活性ヴァイアラスによって引き起こされます。
+■実際、この病気は感染した動物の唾液にに含まれる活性ウイルスによって引き起こされます。
 Actually, it is caused by a live virus from the saliva of an infected animal.
 
 ■条件は唾液が噛まれた傷に滲入することで、被害者は狂犬病に罹患しうるのです。
 If saliva gets into a bite wound, the victim may get rabies.
 
-■ヴァイアラスは神経を通って背骨と脳に至ります。
+■ウイルスは神経を通って背骨と脳に至ります。
 The virus travels along the nerves to the spine and brain.
 
 ■一度<u>**顕著な**</u>特徴が現れると（10日から6ヶ月の内に）、<u>**まもなく**</u>死に至ります。」
@@ -193,22 +207,27 @@ the distraught Mrs. Hart said. “I’ve heard enough.”
 ----
 ####|inert - 自分で動く力のない, 不活性な (without power to move)
 
+■<u>**自活力のない**</u>選手を見て、そのマネージャーはフィールドへと駆け出した。
 Seeing the <u>**inert**</u> player, the manager dashed out onto the field.
 
 ####|salient - 顕著な,目立った (outstanding, prominent)
 
+■<u>**顕著な**</u>彼女の思索の特徴の一つが、「婉曲への依存」だ。
 One of the <u>**salient**</u> features of her poetry is a dependence upon euphemisms.
 
 ####|imminent - 今にも起こりそうな, 切迫した (likely to happen, threatening)
 
+■「核戦争は<u>**間もなく起こる**</u>のだ」と人々が言うのをその評議員は嫌がる。
 The senator loathed it when people said that an atomic war was <u>**imminent**</u>.
 
 ####|squeamish - ショックを受ける, 潔癖すぎる, 気難しい (easy shocked, over sensitive)
 
-When his <u>**squimish**</u> partner complained about a lack of ethics, the businessman laughed at his innocence.
+■彼の<u>**気難しい**</u>相棒は、道徳のなさに不平を言う時、実業家に彼の純真さを笑われた。
+When his <u>**squeamish**</u> partner complained about a lack of ethics, the businessman laughed at his innocence.
 
 ####|engrossed - 熱中した, 夢中になって (absorbed)
 
+■クロスワードに<u>**夢中になって**</u>、彼はレストランで客が少し居ることにも気が付かなかった。
 <u>**Engrossed**</u> in his crossword puzzle, he failed to notice the paucity of customers in the restaurant.
 </details>
 <details><summary>【WEEK 10 まとめ】</summary>

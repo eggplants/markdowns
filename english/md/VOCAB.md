@@ -101,8 +101,8 @@
 | malnutrition  | 栄養失調                         | faulty or adequate diet           |
 | afflict       | 苦しめる, 悩ます                 | to trouble greatly, to distress   |
 | besiege       | 包囲する, 襲う                   | to surround, hem in               |
-| prvation      | (必要最低限なものの)欠乏, 喪失   | lack of necessities               |
-| sinister      | 不吉な, 縁起の悪い               | evil, omonous                     |
+| privation      | (必要最低限なものの)欠乏, 喪失   | lack of necessities               |
+| sinister      | 不吉な, 縁起の悪い               | evil, ominous                     |
 | ubiquitous    | 遍在する, 至るところにある       | being everywhere at the same time |
 | remote        | 遠く離れた, 遠方の               | distant, hidden away              |
 | thwart        | 妨害する, 邪魔する               | to hinder, defeat                 |
@@ -121,7 +121,7 @@
 
 | 単語        | 意味                     | 英語での説明                               |
 |-------------|--------------------------|--------------------------------------------|
-| impresario  | 興行主                   | one who presents cultural series, oganizer |
+| impresario  | 興行主                   | one who presents cultural series, organizer |
 | extortion   | 強要, 強奪               | getting money by threats                   |
 | adverse     | 不利な, 好ましくない     | unfavorable, harmful                       |
 | asset       | 資産, 財産               | a valuable thing to have                   |
@@ -185,7 +185,7 @@
 | inundate      | 氾濫させる, 押し寄せる           | to flood                        |
 | fruitless     | 実を結ばない, 無益な             | useless                         |
 | garbled       | 容量を得ない, 混乱した           | confused, mixed up              |
-| saguine       | 陽気な, 楽天的な                 | optimistic                      |
+| sanguine       | 陽気な, 楽天的な                 | optimistic                      |
 | phlegmatic    | 動きのない, 冷淡な               | calm, hard to rouse to action   |
 | corroborate   | 証拠によって確証する             | confirm, support                |
 | comprehensive | 包括的な, 徹底的な, わかりやすい | thorough                        |

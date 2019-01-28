@@ -31,27 +31,27 @@ The curtain was beginning to <u>**ascend**</u> on Dooley’s real career.
 ----
 ####|emaciated - 異常なほど痩せ衰えた, やつれた (abnormally thin, wasted away)
 
-■その**やつれきった**ワルシャワ強制収容所の収容者達は、なんとかしてナチスからいくつかの戦いの勝利を勝ち取ろうとした。
+■その<u>**やつれきった**</u>ワルシャワ強制収容所の収容者達は、なんとかしてナチスからいくつかの戦いの勝利を勝ち取ろうとした。
 The <u>**emaciated**</u> residents of the Warsaw Ghetto managed to win several skirmishes from the Nazis.
 
 ####|surge - 揺れる, 波のように押し寄せる (to rush suddenly)
 
-■シカゴは最重量級の選手達を最前線においたのだが、彼らに向かって押し寄せるジャイアンツの戦線には役に立たなかった。
+■シカゴは最重量級の選手達を最前線においたのだが、彼らに向かって<u>**押し寄せる**</u>ジャイアンツの戦線には役に立たなかった。
 Chicago put its heaviest players up front, but they were helpless as the Giant's line <u>**surged**</u> toward them.
 
 ####|tranquil - 静かな, 穏やかな (quiet)
 
-■ある消防士は、近所の**穏やかな**雰囲気を終わらせた。
+■ある消防士は、近所の<u>**穏やかな**</u>雰囲気を終わらせた。
 A firefighter terminated the <u>**tranquil**</u> climate of the neighborhood.
 
 ####|sanctuary - 避難所, 聖域, 庇護 (shelter)
 
-■リチャード三世は王女らを捕らえるために教会の聖域を汚した時、越権行為を働いたのだ。
+■リチャード三世は王女らを捕らえるために教会の<u>**聖域**</u>を汚した時、越権行為を働いたのだ。
 When Richard Ⅲ violated the <u>**sanctuary**</u> of the church to seize the princes, he exceeded his jurisdiction.
 
 ####|ascend - 登る, 上がる (to rise)
 
-■無情にも、決心した登山家がヒマラヤの峰を登り始めた。
+■無情にも、決心した登山家がヒマラヤの峰を<u>**登り**</u>始めた。
 Inexorably the determined climber began to <u>**ascend**</u> the Himalayan peak.
 
 </details>
@@ -92,27 +92,27 @@ a best seller that alerted America to the plight of the Vietnamese as well as to
 ----
 ####|malnutrition - 栄養失調 (faulty or adequate diet)
 
-■そのやつれた囚人達は明らかに極度の**栄養失調**を患っていた。
+■そのやつれた囚人達は明らかに極度の<u>**栄養失調**</u>を患っていた。
 The emaciated prisoners were obviously suffering from advanced <u>**malnutrition**</u>.
 
 ####|afflict - 苦しめる, 悩ます (to trouble greatly, to distress)
 
-■ケンタッキー州にある幾ばくかの山岳地帯の、共同体における市民らは、国内最悪の貧困に**苛まれている**。
+■ケンタッキー州にある幾ばくかの山岳地帯の、共同体における市民らは、国内最悪の貧困に<u>**苛まれている**</u>。
 Citizens of several Kentucky mountain communities are afflicted by the worst poverty in the nation.
 
 ####|besiege - 包囲する, 襲う (to surround, hem in)
 
-■白旗を上げることにより、**包囲していた**部隊達は戦いから手を引きたいという願いを示した。
+■白旗を上げることにより、<u>**包囲していた**</u>部隊達は戦いから手を引きたいという願いを示した。
 By running up a white flag, the <u>**besieged**</u> troops indicated their desire to withdraw from the fray.
 
 ####|privation - (必要最低限なものの)欠乏, 喪失 (lack of necessities)
 
-■アルベルト・シュヴァイツァーはジャングルドクターとして、かなりの**必要最低限物資の不足**に耐え忍んだ。
+■アルベルト・シュヴァイツァーはジャングルドクターとして、かなりの<u>**必要最低限物資の不足**</u>に耐え忍んだ。
 Albert Schweitzer endured considerable <u>**privation**</u> as a jungle doctor.
 
 ####|sinister - 邪悪な, 縁起の悪い (evil, ominous)
 
-■その、探偵の親友である便所鳩(=内通者)は、**邪悪な**陰謀について話した。
+■その、探偵の親友である便所鳩(=内通者)は、<u>**邪悪な**</u>陰謀について話した。
 The stool pigeon, the detective's confidant, told him about the <u>**sinister**</u> plot.
 
 </details>
@@ -131,7 +131,7 @@ Because the Geneva Agreement barred the entrance of military personnel to the co
 ■その話は「明日の縁」に語られている。
 That story is told in The Edge of Tomorrow.
 
-■翌年、悪化する病状にもかかわらず、<u>**神出鬼没の**</u>ドーレイは自身の旧敵を<u>**妨害する**</u>ために、ムオンシンの**人里離れた**村に入った。
+■翌年、悪化する病状にもかかわらず、<u>**神出鬼没の**</u>ドーレイは自身の旧敵を<u>**妨害する**</u>ために、ムオンシンの<u>**人里離れた**</u>村に入った。
 Next year, despite a growing illness, the <u>**ubiquitous**</u> Dooley turned up in the <u>**remote**</u> village of Muong-Sing, attempting to <u>**thwart**</u> his traditional enemies:
 
 ■－疾病、不衛生、無知蒙昧、飢餓－(をやっつけようと)また、共産主義の拡大を抑えたいとの望みから
@@ -144,27 +144,27 @@ But his trained medical eye soon told him that the pain in his chest and back wa
 ----
 ####|ubiquitous - 遍在する, 至るところにある (being everywhere at the same time)
 
-■裁判所銃を駆け抜けて、その**至る所に姿を現わす**仲裁人は次々に「反則」を触れ回った。
+■裁判所銃を駆け抜けて、その<u>**至る所に姿を現わす**</u>仲裁人は次々に「反則」を触れ回った。
 Sprinting all over the court, the <u>**ubiquitous**</u> referee called one foul after another.
 
 ####|remote - 遠く離れた, 遠方の (distant, hidden away)
 
-■ベンの非難すべきデーブルマナーは兄弟たちは兄弟のよしみで
+■ベンの非難されるべきテーブルマナーの所為で、兄弟たちは彼を食堂の<u>**離れた**</u>隅に座らせることになった。
 Ben's reprehensible table manners led his fraternity brothers to seat him in a remote corner of the dining room.
 
 ####|thwart - 妨害する,じゃまする (to hinder, defeat)
 
-■**貪欲な**蟻達の邪魔をする試みのうちで、彼は灯油の「堀」で家を囲みました。
+■<u>**貪欲な**</u>蟻達の邪魔をする試みのうちで、彼は灯油の「堀」で家を囲みました。
 In an attempt to <u>**thwart**</u> the voracious ants, he surrounded his house with a moat of burning oil.
 
 ####|harbinger - 先駆者,前ぶれ,前兆 (a forerunner, advance notice)
 
-■その素晴らしいスープは、続く美味しい料理達の**前座**だった。
+■その素晴らしいスープは、続く美味しい料理達の<u>**前座**</u>だった。
 The excellent soup was a <u>**harbinger**</u> of the delicious meal to follow.
 
 ####|malignant - 悪意のある, 悪性の, 致死性のある (likely to cause death)
 
-■その外科手術は、数カ月間彼の親を苛んだ**悪性**腫瘍を遂に位置を突き止めたのだった。
+■その外科手術は、数カ月間彼の親を苛んだ<u>**悪性**</u>腫瘍を遂に位置を突き止めたのだった。
 The surgeon finally located the <u>**malignant**</u> tumor that had afflicted his parent for many months.
 
 </details>
@@ -199,27 +199,27 @@ When he finally <u>**succumbed**</u>, millions throughout the world were stunned
 ----
 ####|excruciating - 苦しい, 責苦にかけられるような (agonizing, torturing)
 
-■**重苦しい**遅滞を伴って、長針は時計一周をゆっくり進んだ。
+■<u>**重苦しい**</u>遅滞を伴って、長針は時計一周をゆっくり進んだ。
 With <u>**excruciating**</u> slowness, the minute hand inched its way around the clock.
 
 ####|respite - 一休み, 遅延, 猶予 (an interval of relief, delay)
 
-■流暢な保険外交員は父に一刻の**猶予**も与えなかった。
+■流暢な保険外交員は父に一刻の<u>**猶予**</u>も与えなかった。
 The voluble insurance salesman gave my father no <u>**respite**</u>.
 
 ####|reverberating - 反響する (reechoing, resounding)
 
-■その救急隊は洞窟を通じ小さな声が**反響している**のを聞き取った。
+■その救急隊は洞窟を通じ小さな声が<u>**反響している**</u>のを聞き取った。
 The rescue team heard the miner's voice <u>**reverberating**</u> through the caves.
 
 ####|fretful - いらいらする, 腹が立ちやすい (worrisome, irritable)
 
-■所得税(納税)の時間に、**苛立ち**顔はいつでも現れるものだ。
+■所得税(納税)の時間に、<u>**苛立ち**</u>顔はいつでも現れるものだ。
 Around income tax time <u>**fretful**</u> faces are ubiquitous.
 
 ####|succumb - 屈する, 負ける, 斃れる (to give way, yield)
 
-■借金に囲まれ、その株式会社は遂に倒産に斃れたのであった。
+■借金に囲まれ、その株式会社は遂に倒産に<u>**斃れた**</u>のであった。
 Besieged by debts, the corporation finally had to <u>**succumb**</u> to bankruptcy.
 
 </details>
@@ -231,7 +231,7 @@ Besieged by debts, the corporation finally had to <u>**succumb**</u> to bankrupt
 
 | 単語          | 意味                             | 英語での意味                      |
 |---------------|----------------------------------|-----------------------------------|
-| emociated     | 異常なほどやせ衰えた, やつれた   | abnormally thin, wasted away      |
+| emaciated     | 異常なほどやせ衰えた, やつれた   | abnormally thin, wasted away      |
 | surge         | 揺れる, 波のように押し寄せる     | to rush suddenly                  |
 | tranquil      | 静かな, 穏やかな                 | quiet                             |
 | sanctuary     | 避難所, 聖域, 庇護               | shelter                           |
@@ -239,8 +239,8 @@ Besieged by debts, the corporation finally had to <u>**succumb**</u> to bankrupt
 | malnutrition  | 栄養失調                         | faulty or adequate diet           |
 | afflict       | 苦しめる, 悩ます                 | to trouble greatly, to distress   |
 | besiege       | 包囲する, 襲う                   | to surround, hem in               |
-| prvation      | (必要最低限なものの)欠乏, 喪失   | lack of necessities               |
-| sinister      | 不吉な, 縁起の悪い               | evil, omonous                     |
+| privation      | (必要最低限なものの)欠乏, 喪失   | lack of necessities               |
+| sinister      | 不吉な, 縁起の悪い               | evil, ominous                     |
 | ubiquitous    | 遍在する, 至るところにある       | being everywhere at the same time |
 | remote        | 遠く離れた, 遠方の               | distant, hidden away              |
 | thwart        | 妨害する, 邪魔する               | to hinder, defeat                 |

@@ -37,29 +37,29 @@ Barnum's philosophy suggests that we might do well to review the plethora* of pu
 
 ####
 ----
-####|impresario - 興行主 (one who presents cultural series, oganizer)
+####|impresario - 興行主 (one who presents cultural series, organizer)
 
-■その著名な**興行主**は沢山の文化的なショーを我々のそれへと持ち込んだ。
+■その著名な<u>**興行主**</u>は沢山の文化的なショーを我々のそれへと持ち込んだ。
 The eminent <u>**impresario**</u> brought many cultural spectacles to our shoes.
 
 ####|extortion - 強要, 強奪 (getting money by threats)
 
-■**脅迫**によって経営マネージャーが責められた時、同僚たちはこの会社から彼を追いだすことを求めた。
+■<u>**脅迫**</u>によって経営マネージャーが責められた時、同僚たちはこの会社から彼を追いだすことを求めた。
 When the business manager was accused of <u>**extortion**</u>, his colleagues sought to oust him from the firm.
 
 ####|adverse - 不利な, 好ましくない (unfavorable, harmful)
 
-■俳優たちにとって、自らの演技が受けた**不**評を読むことは非常に痛みを伴うものでありとても痛々しいものである。
+■俳優たちにとって、自らの演技が受けた<u>**不**</u>評を読むことは非常に痛みを伴うものでありとても痛々しいものである。
 It was excruciatingly painful for the actors to read the <u>**adverse**</u> reviews that their performances had received.
 
 ####|asset - 資産, 財産 (a valuable thing to have)
 
-■オバマ大統領は「テキスティングとは、コミュニケーションの技能におけるいち財産である」ということを感得した。
+■オバマ大統領は「テキスティングとは、コミュニケーションの技能における一<u>**財産**</u>である」ということを感得した。
 President Obama found that texting was an <u>**asset**</u> to his communication skills.
 
 ####|bigot - 強い偏見をもつ人, 偏屈者 (a narrow-minded, prejudiced person)
 
-■その「ひどく怒った」雲に襲われ、その**偏屈で頑固な、強い偏見を持つ人物**は警察に避難所を求めた。
+■その「ひどく怒った」雲に襲われ、その、<u>**偏屈で頑固な、強い偏見を持つ人物**</u>は警察に避難所を求めた。
 Attacked by the irate crowd, the <u>**bigot**</u> asked the police for sanctuary.
 </details>
 <details><summary>【DAY 2 - BIGOTS GET PUBLICITY】</summary>
@@ -93,27 +93,27 @@ and even if they were, the audience would still be exposed to the <u>**venom**</
 ----
 ####|blatant - 騒々しい, けばけばしい (disagreeably loud, very showy)
 
-■**とても騒々しい**不躾な態度でそのレポーターは遺族に嫌がらせを続けた。
+■<u>**とても騒々しい**</u>不躾な態度でそのレポーターは遺族に嫌がらせを続けた。
 With <u>**blatant**</u> discourtesy the reporters continued to harass the bereaved family.
 
 ####|entourage - 側近たち (group of attendants)
 
-■訪問を行った、独裁者の身辺警護の**側近たち**がどこにでも居て、穏やかな街を苛んだのだった。
+■訪問を行った、独裁者の身辺警護の<u>**側近たち**</u>がどこにでも居て、穏やかな街を苛んだのだった。
 The visiting dictator's ubiquitous <u>**entourage**</u> of bodyguards disturbed our tranquil city.
 
 ####|virulent - 悪意に満ちた, 有毒の (full of hate, harmful)
 
-■「黒死病」の名で知られる**凶悪な**疾病により、ヨーロッパの人々は苦しめられた。
+■「黒死病」の名で知られる<u>**凶悪な**</u>疾病により、ヨーロッパの人々は苦しめられた。
 Europe's population was afflicted by a <u>**virulent**</u> plague known as the Black Death.
 
 ####|venom - 毒, 悪意, 恨み (poison, spite, malice)
 
-■クリム・ヤコブライトの母は蛇の一咬みの毒に斃れた。
+■クリム・ヤコブライトの母は蛇の一咬みの<u>**毒**</u>に斃れた。
 Clym Yeobright's mother succumbed to the <u>**venom**</u> of a snake bite.
 
 ####|spew - 吐く, ぶちまける (throw up, vomit, eject)
 
-■候補人の各指令所から辛辣な非難が日誌の外へぶち巻かれた。
+■候補人の各指令所から辛辣な非難が日誌の外へ<u>**ぶち撒けられ**</u>た。
 From each candidate's headquarters acrimonious charges would <u>**spewed**</u> forth diary.
 </details>
 <details><summary>【DAY 3 - COPING WITH BIGOTS】</summary>
@@ -147,27 +147,27 @@ Debating with such warped minds is not feasible* and only tends to exacerbate* t
 ----
 ####|loath - 厭う, 気の進まない (unwilling, reluctant)
 
-■恣意的な規定だなと感じてから我々は従うのを**厭う**ようになった。
+■恣意的な規定だなと感じてから我々は従うのを<u>**厭う**</u>ようになった。
 Since we felt that ruling was arbitrary, we were <u>**loathed**</u>to obey it.
 
 ####|solicit - 懇願する (to beg, seek earnestly)
 
-■貧困家族たちへの投資を**懇願する**ため毎日ボランティア達が出かけた。
+■貧困家族たちへの投資を<u>**懇願する**</u>ため毎日ボランティア達が出かけた。
 Daily the volunteers went out to <u>**solicit**</u>funds for the indigent families.
 
 ####|astute -　聡い (keen, shrewd)
 
-■私の隣人は**目聡すぎて**抵当の不利なところを見ぬいてしまった。
+■私の隣人は<u>**目聡すぎて**</u>抵当の不利なところを見ぬいてしまった。
 My neighbor was <u>**astute**</u>enough to discern the adverse features of the mortgage.
 
 ####|advocate - 提唱する (to be in favor of, to support)
 
-■「私達は敵に爆撃からの暇を与えません」と司令官は**提唱する**に違いなかったろう。
+■「私達は敵に爆撃からの暇を与えません」と司令官は<u>**提唱する**</u>に違いなかったろう。
 The general was sure to <u>**advocate**</u>that we give the enemy no respite from the bombing.
 
 ####|ineffectual - 失活する (not effective)
 
-■その演劇はとても図々しい態度のひどいものであり、親友は**やる気のない**監督を首にした。
+■その演劇はとても図々しい態度のひどいものであり、親友は<u>**やる気のない**</u>監督を首にした。
 The play was so blatantly bad that the impresario fired its <u>**ineffectual**</u>director.
 
 </details>
@@ -202,27 +202,27 @@ the need to find out the cause for such bigotry and to counteract this sinister*
 ----
 ####|scrutinize - 精査する (examine closely)
 
-■弁護士は脅迫状を**精査する**や否や、サツに電話した。
+■弁護士は脅迫状を<u>**精査する**</u>や否や、サツに電話した。
 No sooner did the lawyer <u>**scrutinizes**</u>the extortion note than she called the police.
 
 ####|nefarious - 悪い (villainous, vicious)
 
-■我々は**悪い**頑固者によって以前毒を吐かれたことを聞くにつけひどく混乱した。
+■我々は<u>**悪い**</u>頑固者によって以前毒を吐かれたことを聞くにつけひどく混乱した。
 We were distraught upon hearing the venom spewed forth by the <u>**nofarious**</u>bigot.
 
 ####|amicable - 友好的な (friendly, peaceful)
 
-■我々のラテンアメリカとの**友好**関係は半球貿易の一財産だ。
+■我々のラテンアメリカとの<u>**友好**</u>関係は半球貿易の一財産だ。
 Our <u>**amicable**</u>relations with Latin America are an asset to hemispheric trade.
 
 ####|vexatious - 鬱陶しい (annoying)
 
-■私たちの頭について急上昇したその**鬱陶しい**蚊の羽音がもう少しで我々を発狂させそうにした。
+■私たちの頭について急上昇したその<u>**鬱陶しい**</u>蚊の羽音がもう少しで我々を発狂させそうにした。
 The <u>**vexatious**</u>buzzing of the mosquitoes as they surged about our heads nearly drove us insane.
 
 ####|malady - 疾病 (disease)
 
-■毒性のある**疾病**が一旦その軌線に乗ると私の体温は急降下した。
+■毒性のある<u>**疾病**</u>が一旦その軌線に乗ると私の体温は急降下した。
 Once the virulent <u>**malady**</u>had run its course, my temperature dropped.
 
 </details>
@@ -233,7 +233,7 @@ Once the virulent <u>**malady**</u>had run its course, my temperature dropped.
 
 | 単語        | 意味                     | 英語での説明                               |
 |-------------|--------------------------|--------------------------------------------|
-| impresario  | 興行主                   | one who presents cultural series, oganizer |
+| impresario  | 興行主                   | one who presents cultural series, organizer |
 | extortion   | 強要, 強奪               | getting money by threats                   |
 | adverse     | 不利な, 好ましくない     | unfavorable, harmful                       |
 | asset       | 資産, 財産               | a valuable thing to have                   |
